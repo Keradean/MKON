@@ -11,12 +11,12 @@ public class CollectableItem : MonoBehaviour
         if(other.GetComponent<ItemInventory>() == null) return;
         other.GetComponent<ItemInventory>().CollectItem();
 
-        item.enabled = false;
+        item.SetActive(false);
         StartCoroutine(RespawnItem());
     }
     private System.Collections.IEnumerator RespawnItem()
     {
         yield return new WaitForSeconds(respawnTime);
-        item.enabled = true;
+        item.SetActive(true);
     }
 }
