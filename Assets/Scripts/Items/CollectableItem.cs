@@ -8,17 +8,15 @@ public class CollectableItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Racer"))
-        {
-            other.GetComponent<ItemInventory>().CollectItem();
+        if(other.GetComponent<ItemInventory>() == null) return;
+        other.GetComponent<ItemInventory>().CollectItem();
 
-            item.SetActive(false);
-            StartCoroutine(RespawnItem());
-        }
+        item.enabled = false;
+        StartCoroutine(RespawnItem());
     }
     private System.Collections.IEnumerator RespawnItem()
     {
         yield return new WaitForSeconds(respawnTime);
-        item.SetActive(true);
+        item.enabled = true;
     }
 }
