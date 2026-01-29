@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Projectile
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 2
-  ItemPRefab: {fileID: 5701566240584994825, guid: 6e5d2f8c5f5a1374f8a6a7bbd4daad17, type: 3}
+  ItemPrefab: {fileID: 5701566240584994825, guid: 6e5d2f8c5f5a1374f8a6a7bbd4daad17, type: 3}
   boostEffect: 0
   boostDuration: 0
   boostAmount: 0
