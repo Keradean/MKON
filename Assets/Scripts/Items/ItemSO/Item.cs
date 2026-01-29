@@ -39,7 +39,7 @@ public class Item : ScriptableObject
     }
     private void ActivateProjectile()
     {
-        Vector3 spawn = user.transform.position + user.transform.forward * 2f;
+        Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 2f;
         Instantiate(ItemPRefab, spawn, user.transform.rotation);
     }
 }

@@ -23,8 +23,9 @@ public class ItemInventory : MonoBehaviour
         }
     }
 
-    public void UseItem()
+    public void OnItemuse()
     {
+        Debug.Log("Use Item");
         if (collectedItems.Count > 0)
         {
             Item itemToUse = collectedItems[0];

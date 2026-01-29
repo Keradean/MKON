@@ -1040,6 +1040,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Itemuse",
+                    "type": "Button",
+                    "id": "d4099db5-3343-4d80-b575-d3b5dd7971f6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1282,6 +1291,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62d94ad2-0fd0-4e49-b9ed-9d4dd3ab6937",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Itemuse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7d6fb41-4414-4e67-96ce-4c90e608130c",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Itemuse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
