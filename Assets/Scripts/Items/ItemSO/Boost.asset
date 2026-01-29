@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boost
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 1
-  ItemPRefab: {fileID: 0}
+  ItemPrefab: {fileID: 4995135828919434619, guid: 5fffc47682089534193281687d740f97, type: 3}
   boostEffect: 1
-  boostDuration: 2
+  boostDuration: 5
   boostAmount: 1

@@ -4,13 +4,14 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public Itemtype itemType;
-    [SerializeField] GameObject ItemPRefab;
+    [SerializeField] GameObject ItemPrefab;
 
     [SerializeField] boostType boostEffect;
     [SerializeField] float boostDuration;
     [SerializeField] float boostAmount; 
 
     private ItemInventory user;
+    private GameObject InstantiatedPrefab;
 
     public void Activate(ItemInventory user)
     {
@@ -31,16 +32,21 @@ public class Item : ScriptableObject
     private void ActivateTrap()
     {
         Vector3 spawn = user.transform.position - user.transform.forward * 2f;
-        Instantiate(ItemPRefab, spawn, Quaternion.identity);
+        Instantiate(ItemPrefab, spawn, Quaternion.identity);
     }
     private void ActivateBoost()
     {
         user.ApplyBoost(boostEffect, boostAmount, boostDuration);
+        if (boostEffect == boostType.Shield)
+        {
+            InstantiatedPrefab = Instantiate(ItemPrefab, user.transform);
+            InstantiatedPrefab.GetComponent<ShieldBuff>().duration = boostDuration;
+        }
     }
     private void ActivateProjectile()
     {
         Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 2f;
-        Instantiate(ItemPRefab, spawn, user.transform.rotation);
+        Instantiate(ItemPrefab, spawn, user.transform.rotation);
     }
 }
 

@@ -26,7 +26,7 @@ public class ItemManager : MonoBehaviour
         int racerCount = 8;//RaceManager.Instance.racers.Count;
         float modifire = (racerCount/2 - ranking) *2;
         float roll = Random.Range(0f, 100f);
-        roll = 40;
+        //roll = 20;
         if (roll > 60f - modifire)
         {
             int index = Random.Range(0, traps.Count);
