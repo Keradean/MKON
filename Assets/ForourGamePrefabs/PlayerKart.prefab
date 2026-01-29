@@ -519,8 +519,6 @@ MonoBehaviour:
   brakeTorque: 500
   stickToGroundForce: 10
   steerAngle: 15
-  jumpForce: 300
-  jumpCooldown: 1
   BreakAssist: 0
 --- !u!1 &3955921026752867534
 GameObject:
@@ -878,6 +876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897394791025077525}
   - component: {fileID: 3597053325677668985}
+  - component: {fileID: 6223922484915090753}
   m_Layer: 0
   m_Name: Bouncing
   m_TagString: Untagged
@@ -923,6 +922,18 @@ CapsuleCollider:
   m_Height: 1.4132957
   m_Direction: 2
   m_Center: {x: 0, y: 0.45037755, z: 0.099336624}
+--- !u!114 &6223922484915090753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320592814748456635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df04033f3c357a94f83d2b959aa07cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemInventory
 --- !u!1 &7529993712000449597
 GameObject:
   m_ObjectHideFlags: 0
