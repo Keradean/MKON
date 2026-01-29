@@ -18,7 +18,8 @@ public class ItemInventory : MonoBehaviour
     {
         if (collectedItems.Count < 4)
         {
-            collectedItems.Add(ItemManager.Instance.GetRandomItem(1/*racer.raking*/));
+            collectedItems.Add(ItemManager.Instance.GetRandomItem(8/*racer.raking*/));
+            Debug.Log(collectedItems[collectedItems.Count-1].itemType);
         }
     }
 
