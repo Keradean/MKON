@@ -1,4 +1,0 @@
-repository "MKON 2026-01-27_20-54-32/MKON@9072252864787@cloud"
-  path "/"
-    br "/main"
-    co "/main"
