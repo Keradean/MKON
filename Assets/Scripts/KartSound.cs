@@ -4,14 +4,25 @@ using UnityEngine;
 public class KartSound : MonoBehaviour
 {
     [Header("Effect Sounds")]
-    [SerializeField] private AudioSource StartSound;
-    [SerializeField] private AudioSource EngineSound;
-    [SerializeField] private AudioSource DrivingSound;
-    [SerializeField] private AudioSource ReverseSound;
+    public AudioSource StartSound;
+    public AudioSource EngineSound;
+    public AudioSource DrivingSound;
+    public AudioSource ReverseSound;
     //[SerializeField]
 
     public static KartSound Instance;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void PlaySound(AudioSource sound)
     {
         sound.Stop();
