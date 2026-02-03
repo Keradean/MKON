@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169282062848951452}
   - component: {fileID: 5267646844208963300}
+  - component: {fileID: 5635734486713039055}
   m_Layer: 0
   m_Name: CollectableItem
   m_TagString: Untagged
@@ -47,6 +48,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollectableItem
   item: {fileID: 2040207790028165342}
   respawnTime: 5
+--- !u!65 &5635734486713039055
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955360514788209497}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2040207790028165342
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +78,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7681675798194948025}
-  - component: {fileID: 8169333286898546754}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -81,27 +102,6 @@ Transform:
   - {fileID: 5022732758450209354}
   m_Father: {fileID: 4169282062848951452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8169333286898546754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040207790028165342}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8, y: 1, z: 0.8}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4773513962809058721
 PrefabInstance:
   m_ObjectHideFlags: 0

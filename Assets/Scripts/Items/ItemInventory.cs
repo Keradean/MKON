@@ -6,12 +6,12 @@ using System.Collections;
 public class ItemInventory : MonoBehaviour
 {
     private List<Item> collectedItems = new List<Item>();
-    //private Racer racer;
+    private Racer racer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //racer = GetComponent<Racer>();
+        racer = GetComponent<Racer>();
     }
 
     public void CollectItem()
@@ -38,10 +38,10 @@ public class ItemInventory : MonoBehaviour
     {
         switch (type) {
             case boostType.Speed:
-                StartCoroutine(ApplySpeedBoost(amount, duration));
+                racer.Speedboost(amount, duration);
                 break;
             case boostType.Shield:
-                StartCoroutine(ApplyShieldBoost(duration));
+                racer.GetShieldBoost(duration);
                 break;
         }
     }
@@ -51,11 +51,5 @@ public class ItemInventory : MonoBehaviour
         //racer.speed += amount;
         yield return new WaitForSeconds(duration);
         //racer.speed -= amount;
-    }
-    private IEnumerator ApplyShieldBoost(float duration)
-    {
-        //racer.isShielded = true;
-        yield return new WaitForSeconds(duration);
-        //racer.isShielded = false;
     }
 }

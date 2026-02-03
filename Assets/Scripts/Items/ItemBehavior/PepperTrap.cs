@@ -1,26 +1,21 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PepperTrap : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] LayerMask layerMask;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Physics.SphereCast(transform.position, 0.1f, transform.forward, out RaycastHit hit, 0.1f))
+        if ((layerMask.value & (1 << other.gameObject.layer)) != 0)
         {
-            //hit.GetComponent<Racer>()?.GetHit();
+            Debug.Log("Pepper Trap Triggered");
+            other.GetComponent<Racer>()?.GetHit();
             Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void DisableTrap()
     {
-        //other.GetComponent<Racer>()?.GetHit();
         Destroy(gameObject);
     }
 }

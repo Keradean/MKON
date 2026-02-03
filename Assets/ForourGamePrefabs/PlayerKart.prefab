@@ -503,8 +503,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerKartControl
   kartGas: 0
   kartBrake: 0
-  kartJump: 0
   kartSteer: {x: 0, y: 0}
+  kartDrift: 0
+  driftSteerMultiplier: 1.5
+  driftSidewaysFriction: 0.6
+  normalSidewaysFriction: 1
+  driftForwardForce: 200
+  minSteerAngle: 8
+  maxSteerAngle: 22
+  maxSteerSpeed: 35
   wheelColliders:
   - {fileID: 1647768395236782468}
   - {fileID: 3061247796757502737}
@@ -518,7 +525,6 @@ MonoBehaviour:
   driveTorque: 100
   brakeTorque: 500
   stickToGroundForce: 10
-  steerAngle: 15
   BreakAssist: 0
 --- !u!1 &3955921026752867534
 GameObject:
@@ -877,7 +883,7 @@ GameObject:
   - component: {fileID: 4897394791025077525}
   - component: {fileID: 3597053325677668985}
   - component: {fileID: 6223922484915090753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bouncing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

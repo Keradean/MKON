@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84fd055f0c05e10408ebd1d90d43b07e, type: 3}
-  m_Name: Boost
+  m_Name: Shield
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 1
   ItemPrefab: {fileID: 4995135828919434619, guid: 5fffc47682089534193281687d740f97, type: 3}

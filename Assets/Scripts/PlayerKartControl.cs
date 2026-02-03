@@ -20,6 +20,7 @@ public class PlayerKartControl : MonoBehaviour
     [SerializeField] private float minSteerAngle = 8f;
     [SerializeField] private float maxSteerAngle = 22f;
     [SerializeField] private float maxSteerSpeed = 35f;
+    public float MaxSteerSpeed { get { return maxSteerSpeed; } }
 
     [Header("Drive Physics")]
     [SerializeField] private WheelCollider[] wheelColliders;
@@ -150,7 +151,7 @@ public class PlayerKartControl : MonoBehaviour
         }
 
         // ---------- High speed stability ----------
-        if (speed > 15f)
+        if (speed > 15)
             rb.angularVelocity *= 0.97f;
     }
 
