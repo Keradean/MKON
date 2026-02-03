@@ -45,11 +45,4 @@ public class ItemInventory : MonoBehaviour
                 break;
         }
     }
-
-    private IEnumerator ApplySpeedBoost(float amount, float duration)
-    {
-        //racer.speed += amount;
-        yield return new WaitForSeconds(duration);
-        //racer.speed -= amount;
-    }
 }
