@@ -18,25 +18,45 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - NadirBlend: 1
     - NadirBlend_1: 30
+    - _AtmosphereThickness: 1
     - _AuroraBlend: 1
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _DistortionSpeed: 0.05
+    - _Exposure: 1.3
     - _GradientOffset: 0
     - _Intensity: 1
     - _NoiseScale: 20
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _StarHeight: 100
     - _StarIntensity: 50
     - _StarPower: 30
+    - _SunDisk: 2
+    - _SunSize: 0.04
+    - _SunSizeConvergence: 5
     - _TwirlStrength: 0.05
     - _ZenitBlend: 1
     - _auroraPower: 1
@@ -46,6 +66,7 @@ Material:
     - _HorizonColor: {r: 1, g: 1, b: 1, a: 1}
     - _ScrollSpeed: {r: 1, g: 1, b: 0, a: 0}
     - _SkyColor: {r: 0.001913497, g: 0.055381313, b: 0.40566036, a: 1}
+    - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _TwirlOffset: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
@@ -63,3 +84,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.ShaderGraph.Editor::UnityEditor.Rendering.BuiltIn.AssetVersion
   version: 0
+--- !u!114 &5187041684028494858
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
