@@ -969,6 +969,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4526179738088361251, guid: 4e3b40fe7c5abd2459b34b2150719ef1, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7320592814748456635, guid: 4e3b40fe7c5abd2459b34b2150719ef1, type: 3}
       propertyPath: m_Layer
       value: 8
