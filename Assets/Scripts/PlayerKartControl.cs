@@ -76,6 +76,7 @@ public class PlayerKartControl : MonoBehaviour
         CheckGroundStatus();
         Drive(kartGas, kartBrake, kartSteer, kartDrift);
         AddDownForce();
+        UpdateWheelPositions();
     }
 
     private void Drive(float gas, float brake, Vector2 steer, bool drift)
@@ -212,7 +213,24 @@ public class PlayerKartControl : MonoBehaviour
 
         airConstraintsActive = false;
     }
-
+    
+    private void UpdateWheelPositions()
+    {
+        for (int i = 0; i < wheelColliders.Length; i++)
+        {
+            if (i < kartWheels.Length && kartWheels[i] != null)
+            {
+                Vector3 pos;
+                Quaternion rot;
+            
+                wheelColliders[i].GetWorldPose(out pos, out rot);
+            
+                kartWheels[i].transform.position = pos;
+                kartWheels[i].transform.rotation = rot;
+            }
+        }
+    }
+    
     private void ResetKart()
     {
         transform.position = kartReset.position;
