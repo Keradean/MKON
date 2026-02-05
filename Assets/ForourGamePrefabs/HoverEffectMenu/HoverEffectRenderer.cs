@@ -188,6 +188,7 @@ public class HoverEffectRenderer : MonoBehaviour
 
         if (hoverShaderMaterial != null)
             hoverShaderMaterial.SetTexture("_TMPMaskTexture", null);
+        hoverShaderMaterial.SetFloat("_AspectRatio", 0f);
     }
     private void Update()
     {
