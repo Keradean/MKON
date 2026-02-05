@@ -59,14 +59,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _Angle: -30.1
-    - _AspectRatio: 1
-    - _UnscaledTime: 0
+    - _AspectRatio: 0.5925926
+    - _UnscaledTime: 35.9142
     - _isHovering: 1
     - _speed: 0.5
     - _strength: 4
     - _width: 0.4
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 1, b: 0.6554263, a: 0}
+    - _Color: {r: 0.3820755, g: 1, b: 0.9742211, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
