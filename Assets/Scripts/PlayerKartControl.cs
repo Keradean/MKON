@@ -29,7 +29,10 @@ public class PlayerKartControl : MonoBehaviour
     [SerializeField] private float brakeTorque = 500f;
 
     [Header("Stick to Ground")]
-    [SerializeField] private float stickToGroundForce = 10f;
+    [SerializeField] private float stickToGroundForce = 10f;    
+    
+    [Header("KartReset")]
+    [SerializeField] private Transform kartReset;
 
     private Rigidbody rb;
     public bool BreakAssist = true;
@@ -212,7 +215,7 @@ public class PlayerKartControl : MonoBehaviour
 
     private void ResetKart()
     {
-        transform.position = new Vector3(23f, 0.5f, 73f);
+        transform.position = kartReset.position;
         transform.rotation = Quaternion.identity;
 
         rb.linearVelocity = Vector3.zero;
