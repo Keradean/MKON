@@ -99,15 +99,9 @@ public class PlayerKartControl : MonoBehaviour
 
             SetSidewaysFriction(driftSidewaysFriction);
 
-            rb.AddTorque(
-                Vector3.up * steerDir * 220f * Time.deltaTime,
-                ForceMode.Acceleration
-            );
+            rb.AddTorque(Vector3.up * steerDir * 220f * Time.deltaTime, ForceMode.Acceleration);
 
-            rb.AddForce(
-                transform.forward * driftForwardForce * Time.deltaTime,
-                ForceMode.Acceleration
-            );
+            rb.AddForce(transform.forward * driftForwardForce * Time.deltaTime, ForceMode.Acceleration);
         }
         else
         {
