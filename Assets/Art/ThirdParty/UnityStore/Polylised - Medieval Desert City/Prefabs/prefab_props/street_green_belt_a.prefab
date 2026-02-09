@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33983711785317934}
   - component: {fileID: 23090859365714582}
   - component: {fileID: 4462229146214375618}
+  - component: {fileID: 2417638719096711959}
   m_Layer: 6
   m_Name: street_green_belt_a
   m_TagString: Untagged
@@ -113,3 +114,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 30.008055, y: 5.879675, z: 1.2381604}
   m_Center: {x: -0.0038938522, y: 0.0004657507, z: 0.61633015}
+--- !u!114 &2417638719096711959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789806267298236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
