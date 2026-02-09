@@ -25,7 +25,9 @@ public class HolyBomb : MonoBehaviour
         Collider[] hitRacer = Physics.OverlapSphere(transform.position, radius, layermask);
         foreach (Collider racer in hitRacer)
         {
-            //racer.GetComponent<Racer>().GetHit();
+            racer.GetComponent<Racer>()?.GetHit();
         }
+
+        Destroy(gameObject);
     }
 }

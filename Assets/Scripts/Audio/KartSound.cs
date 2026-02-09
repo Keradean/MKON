@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class KartSound : MonoBehaviour
 {
@@ -21,15 +22,42 @@ public class KartSound : MonoBehaviour
     private Rigidbody rb;
     private float ddc_KartSpeed;
     [HideInInspector] public bool isReversing = false;
+    [HideInInspector] public bool BrakeToAStop = false;
+    public ParticleSystem[] TireSmoke;
     
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        for (int i = 0; i < TireSmoke.Length; i++)
+        {
+            TireSmoke[i].gameObject.SetActive(true);
+            TireSmoke[i].Stop();
+        }
+
+        if (IdleSound != null)
+        {
+            IdleSound.volume = 0f; 
+            IdleSound.Play();
+        }
+
+        if (DrivingSound != null)
+        {
+            DrivingSound.volume = 0f;
+            DrivingSound.Play();
+        }
+
+        if (ReverseSound != null)
+        {
+            ReverseSound.volume = 0f;
+            ReverseSound.Play();
+        }
         
-        if (IdleSound != null) IdleSound.Play();
-        if (DrivingSound != null) DrivingSound.Play();
-        if (ReverseSound != null) ReverseSound.Play();
+        if (DriftSound != null) 
+        {
+            DriftSound.volume = 0f;
+            DriftSound.Play();
+        }
     }
 
     void Update()
@@ -44,6 +72,7 @@ public class KartSound : MonoBehaviour
         PlayDrivingSound();
         PlayReverseSound();
         PlayDriftSound();
+        PlayBrakeToAStop();
     }
 
     private void CheckIfReversing()
@@ -112,5 +141,51 @@ public class KartSound : MonoBehaviour
                 DriftSound.volume = Mathf.Lerp(DriftSound.volume, 0f, Time.deltaTime * 10f);
             }
         }
+    }
+
+    private void PlayBrakeToAStop()
+    {
+        // Harsh brake sound
+        if (BrakeToAStop && ddc_KartSpeed < 0.60f && !isReversing)
+        {
+            ReverseSound.volume = 0f;
+            DrivingSound.volume = 0f; 
+            DriftSound.volume = Mathf.Lerp(0.1f, DriftSoundVolume, ddc_KartSpeed * 1.2f);
+
+            for (int i = 0; i < TireSmoke.Length; i++)
+            {
+                if (TireSmoke[i].isStopped)
+                {
+                    TireSmoke[i].Play();
+                }
+            }
+        }
+        // When kart stops 
+        if (ddc_KartSpeed < 0.03f || !BrakeToAStop)
+        {
+            DriftSound.volume = 0f;
+            for (int i = 0; i < TireSmoke.Length; i++)
+            {
+                if (TireSmoke[i].isPlaying)
+                {
+                    TireSmoke[i].Stop();
+                }
+            }
+
+        }
+        
+    }
+
+    public void OnBrake(InputValue button)
+    {
+        if(button.isPressed)
+        {
+            BrakeToAStop = true;
+            
+        }
+        if(!button.isPressed)
+            {
+            BrakeToAStop = false;
+            }
     }
 }

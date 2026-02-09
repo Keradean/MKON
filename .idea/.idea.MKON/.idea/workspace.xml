@@ -6,13 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/GeeZyyGames/Winter/prefab/pine tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/GeeZyyGames/Winter/prefab/pine tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Console.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Console.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Hourse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Hourse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Stone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Horse Statue/Materials/Stone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/All Animations/Premade/LogStomper.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/All Animations/Premade/LogStomper.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/GeeZyyGames/Desert/materials/Material.015.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/GeeZyyGames/Desert/materials/Material.015.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/ThirdParty/UnityStore/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Kart Sounds/Audio/Musik.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Kart Sounds/Audio/Musik.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/EnemyKart.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/EnemyKart.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Multiplayer/All Particles/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Source 3D.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Multiplayer/All Particles/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Source 3D.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KartSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KartSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerKartControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerKartControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehavior/HolyBomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehavior/HolyBomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KartSound.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KartSound.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestDeCol.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WoodFence1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WoodFence1.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,25 +62,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "SnowLvl",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMAIWorkflowsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SnowLvlUp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMAIWorkflowsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.5f2\Editor\Unity.exe" />
@@ -103,15 +115,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="173404">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="173404" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -137,6 +147,8 @@
       <workItem from="1770289979548" duration="118000" />
       <workItem from="1770567094892" duration="237000" />
       <workItem from="1770567348942" duration="8252000" />
+      <workItem from="1770644891436" duration="11042000" />
+      <workItem from="1770671614508" duration="3067000" />
     </task>
     <servers />
   </component>
