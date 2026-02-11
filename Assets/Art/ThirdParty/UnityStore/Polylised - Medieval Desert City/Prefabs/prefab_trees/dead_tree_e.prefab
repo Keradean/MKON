@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33973826128565426}
   - component: {fileID: 23576559831141426}
   - component: {fileID: 1358845899010759707}
+  - component: {fileID: 8186868000558372443}
   m_Layer: 6
   m_Name: dead_tree_e
   m_TagString: Untagged
@@ -112,3 +113,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.958459, y: 0.93659484, z: 10.682487}
   m_Center: {x: 0.009852171, y: -0.11502738, z: 5.3415103}
+--- !u!114 &8186868000558372443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582960387707150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff

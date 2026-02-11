@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33495845668850900}
   - component: {fileID: 23168299531830410}
   - component: {fileID: 7925862383371548906}
+  - component: {fileID: -6133426604797084507}
   m_Layer: 6
   m_Name: pine_a
   m_TagString: Untagged
@@ -113,3 +114,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.004650934, y: 0.005386268, z: 0.08327943}
   m_Center: {x: -0.00013445527, y: 0.00006941939, z: 0.04157958}
+--- !u!114 &-6133426604797084507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058886637327582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
