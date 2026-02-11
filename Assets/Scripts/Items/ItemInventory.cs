@@ -7,11 +7,14 @@ public class ItemInventory : MonoBehaviour
 {
     private List<Item> collectedItems = new List<Item>();
     private Racer racer;
+    private bool isAI = false;
+    private bool isUsingItem = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         racer = GetComponent<Racer>();
+        isAI = racer.isAI;
     }
 
     public void CollectItem()
@@ -20,6 +23,10 @@ public class ItemInventory : MonoBehaviour
         {
             collectedItems.Add(ItemManager.Instance.GetRandomItem(8/*racer.raking*/));
             Debug.Log(collectedItems[collectedItems.Count-1].itemType);
+        }
+        if (isAI && !isUsingItem)
+        {
+            StartCoroutine(AIUseItem());
         }
     }
 
@@ -44,5 +51,16 @@ public class ItemInventory : MonoBehaviour
                 racer.GetShieldBoost(duration);
                 break;
         }
+    }
+
+    private IEnumerator AIUseItem()
+    {
+        isUsingItem = true;
+        while (collectedItems.Count > 0)
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
+            OnItemuse();
+        }
+        isUsingItem = false;
     }
 }

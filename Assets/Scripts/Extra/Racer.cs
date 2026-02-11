@@ -8,6 +8,9 @@ public class Racer : MonoBehaviour
     private PlayerKartControl kartControl;
     [SerializeField] Transform kartmesh;
 
+    public bool isAI = false;
+    private AIRivalKart aiRivalKart;
+
     public bool isShielded = false;
 
     private Coroutine shieldCoroutine;
@@ -17,17 +20,25 @@ public class Racer : MonoBehaviour
     {
         rb = GetComponentInParent<Rigidbody>();
         kartControl = GetComponentInParent<PlayerKartControl>();
+        if (isAI)
+        {
+            aiRivalKart = GetComponentInParent<AIRivalKart>();
+        }
     }
 
 
     public void GetHit()
     {
         if (isShielded) return;
-        rb.linearVelocity *= 0.2f;
-        kartControl.enabled = false;
-        isShielded = true;
+        if (!isAI)
+        {
+            rb.linearVelocity *= 0.2f;
+            kartControl.enabled = false;
+            Invoke("RecoverControl", 1.1f);
+        }
+        else 
+            aiRivalKart.ModifySpeed(0, 1.1f);
         hittimer = 1f;
-        Invoke("RecoverControl", 1.1f);
     }
 
     private float hittimer = 0f;
@@ -64,6 +75,11 @@ public class Racer : MonoBehaviour
 
     public void Speedboost(float amount, float duration)
     {
+        if(isAI)
+        {
+            aiRivalKart.ModifySpeed(25 + amount, duration);
+            return;
+        }
         rb.AddForce(transform.forward * amount, ForceMode.VelocityChange);
         Invoke("EndSpeedBoost", duration);
     }

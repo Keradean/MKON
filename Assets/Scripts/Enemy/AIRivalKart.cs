@@ -9,6 +9,8 @@ public class AIRivalKart : MonoBehaviour
     public Transform[] AiRivalWaypoints;
     public GameObject[] Wheels;
 
+    private Coroutine rocoverSpeed;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -53,4 +55,18 @@ public class AIRivalKart : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         _checkDistance = true;
     }
+
+    public void ModifySpeed(float amount, float duration)
+    {
+        _agent.speed = amount;
+        StopCoroutine(rocoverSpeed);
+        rocoverSpeed = StartCoroutine(RecoverSpeed(duration));
+    }
+
+    private IEnumerator RecoverSpeed(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        _agent.speed = 25f; // Reset to original speed
+    }
+
 }
