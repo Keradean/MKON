@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Obstacle
+  - FxTemporaire
+  - Splat
+  - Burn
+  - Player_1
+  - Player_2
+  - Player_3
+  - Player_4
+  - Rival_1
+  - Rival_2
+  - Rival_3
+  - Rival_4
   layers:
   - Default
   - TransparentFX
