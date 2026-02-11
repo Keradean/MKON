@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8305582828327564513}
   m_Layer: 0
   m_Name: PlayerKart
-  m_TagString: Untagged
+  m_TagString: Player_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1070,6 +1070,7 @@ MonoBehaviour:
   EngineRunning: {fileID: 3636829642979280239}
   ExplodeSound: {fileID: 8300000, guid: c853d3c9bef384e8d84dd8d5fef5a2ba, type: 3}
   isPlayer: 1
+  SpinSound: {fileID: 8300000, guid: 8a23239be9de14838884a763327af51e, type: 3}
 --- !u!1 &3636829642979280239
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,7 +6378,7 @@ GameObject:
   - component: {fileID: 2445036436662331402}
   m_Layer: 2
   m_Name: kart-oobi
-  m_TagString: Untagged
+  m_TagString: Player_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
