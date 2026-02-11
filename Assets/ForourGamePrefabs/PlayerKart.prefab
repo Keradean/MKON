@@ -6327,6 +6327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Racer
   rankingPos: 0
   kartmesh: {fileID: 7357656905025047955}
+  isAI: 0
   isShielded: 0
 --- !u!1 &7529993712000449597
 GameObject:

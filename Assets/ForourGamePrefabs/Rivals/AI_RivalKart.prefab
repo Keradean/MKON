@@ -4729,6 +4729,7 @@ MonoBehaviour:
   EngineRunning: {fileID: 0}
   ExplodeSound: {fileID: 8300000, guid: c853d3c9bef384e8d84dd8d5fef5a2ba, type: 3}
   isPlayer: 0
+  SpinSound: {fileID: 0}
 --- !u!195 &4700582100657675115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9803,6 +9804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Racer
   rankingPos: 0
   kartmesh: {fileID: 3540031077903248958}
+  isAI: 1
   isShielded: 0
 --- !u!1 &4361900285753912590
 GameObject:

@@ -27,7 +27,7 @@ public class AIRivalKart : MonoBehaviour
 
     private void CheckDistanceToNextTarget()
     {
-        if (_agent.remainingDistance <= _agent.stoppingDistance + 0.1f && _checkDistance)
+        if (_agent.remainingDistance <= _agent.stoppingDistance + 15f && _checkDistance)
         {
             if (_currentWaypoint < AiRivalWaypoints.Length - 1)
             {
@@ -59,7 +59,7 @@ public class AIRivalKart : MonoBehaviour
     public void ModifySpeed(float amount, float duration)
     {
         _agent.speed = amount;
-        StopCoroutine(rocoverSpeed);
+        if (rocoverSpeed != null)StopCoroutine(rocoverSpeed);
         rocoverSpeed = StartCoroutine(RecoverSpeed(duration));
     }
 
