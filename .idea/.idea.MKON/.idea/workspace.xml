@@ -6,15 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/KartSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/KartSound.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/ObstacleSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ObstacleSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerKartControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerKartControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AIRivalKart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AIRivalKart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/ProgressPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ProgressPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spline_Samples/Splines/2.8.2/Spline Examples (requires Shader Graph package)/Runtime/LoftRoadBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spline_Samples/Splines/2.8.2/Spline Examples (requires Shader Graph package)/Runtime/LoftRoadBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/All UI/Map/PreMade/MapRoad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/All UI/Map/PreMade/MapRoad.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Multiplayer/All Particles/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@f5957b19e230/Runtime/UniversalRendererRenderGraph.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@e5423e5d0d2a/Editor/Data/Nodes/Math/Range/FractionNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -62,7 +61,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "SnowLvlUp",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
