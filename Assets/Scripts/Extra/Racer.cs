@@ -4,6 +4,11 @@ using UnityEngine;
 public class Racer : MonoBehaviour
 {
     public int rankingPos;
+    public int lap;
+    public int waypointIndex;
+    public float distanceToNext;
+    public float TotalProgress => lap * 100000 + waypointIndex * 1000 - distanceToNext;
+
     private Rigidbody rb;
     private PlayerKartControl kartControl;
     [SerializeField] Transform kartmesh;
@@ -24,8 +29,8 @@ public class Racer : MonoBehaviour
         {
             aiRivalKart = GetComponentInParent<AIRivalKart>();
         }
+        GameManager.Instance.RacerRanking.Add(this);
     }
-
 
     public void GetHit()
     {
@@ -36,28 +41,35 @@ public class Racer : MonoBehaviour
             kartControl.enabled = false;
             Invoke("RecoverControl", 1.1f);
         }
-        else 
+        else
+        {
             aiRivalKart.ModifySpeed(0, 1.1f);
+        }
         hittimer = 1f;
     }
 
     private float hittimer = 0f;
     private void Update()
     {
+        distanceToNext = Vector3.Distance(transform.position, GameManager.Instance.GetWayPoint(waypointIndex + 1).position);
+        rankingPos = GameManager.Instance.GetRankingPos(this);
         if (hittimer > 0)
         {
             kartmesh.Rotate(new Vector3(0, 1080, 0) * Time.deltaTime);
             hittimer -= Time.deltaTime;
+            if (hittimer <= 0)
+            {
+                kartmesh.localRotation = Quaternion.identity;
+                isShielded = false;
+            }
         }
     }
 
     private void RecoverControl()
     {
         kartControl.enabled = true;
-        isShielded = false;
-        //reset rotation
-        kartmesh.localRotation = Quaternion.identity;
     }
+
     public void GetShieldBoost(float duration)
     {
         if (shieldCoroutine != null)

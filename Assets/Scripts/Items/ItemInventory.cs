@@ -6,22 +6,30 @@ using System.Collections;
 public class ItemInventory : MonoBehaviour
 {
     private List<Item> collectedItems = new List<Item>();
-    private Racer racer;
+    public Racer racer;
     private bool isAI = false;
     private bool isUsingItem = false;
+    [SerializeField] private Item specialItem;
+    [SerializeField] [Range(0.4f, 1.3f)] private float itemLuck = 0.7f; // 1 no bias, <1 more likely to get worse items, >1 more likely to get better items
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         racer = GetComponent<Racer>();
         isAI = racer.isAI;
+        if(specialItem == null)
+        {
+            specialItem = ItemManager.Instance.GetRandomItem(1, itemLuck);
+        }
     }
 
     public void CollectItem()
     {
         if (collectedItems.Count < 4)
         {
-            collectedItems.Add(ItemManager.Instance.GetRandomItem(8/*racer.raking*/));
+            Item item = ItemManager.Instance.GetRandomItem(racer.rankingPos, itemLuck);
+            if (item == null) item = specialItem;
+            collectedItems.Add(item);
             Debug.Log(collectedItems[collectedItems.Count-1].itemType);
         }
         if (isAI && !isUsingItem)

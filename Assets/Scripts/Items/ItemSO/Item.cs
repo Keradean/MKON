@@ -31,7 +31,7 @@ public class Item : ScriptableObject
     }
     private void ActivateTrap()
     {
-        Vector3 spawn = user.transform.position - user.transform.forward * 2f;
+        Vector3 spawn = user.transform.position - user.transform.forward * 3f;
         Instantiate(ItemPrefab, spawn, Quaternion.identity);
     }
     private void ActivateBoost()
@@ -45,8 +45,14 @@ public class Item : ScriptableObject
     }
     private void ActivateProjectile()
     {
-        Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 2f;
-        Instantiate(ItemPrefab, spawn, user.transform.rotation);
+        Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 3f;
+        GameObject proj = Instantiate(ItemPrefab, spawn, user.transform.rotation);
+        if (proj.TryGetComponent(out Coconut coconut))
+        {
+            int targetIndex = user.racer.rankingPos - 2;
+            if (targetIndex < 0) targetIndex = GameManager.Instance.RacerRanking.Count - 1;
+            coconut.target = GameManager.Instance.RacerRanking[targetIndex];
+        }
     }
 }
 

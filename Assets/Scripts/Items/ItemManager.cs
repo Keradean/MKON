@@ -21,38 +21,38 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    public Item GetRandomItem(int ranking) 
+    public Item GetRandomItem(int ranking, float luck) 
     {
-        int racerCount = 8;//RaceManager.Instance.racers.Count;
+        int racerCount = GameManager.Instance.RacerRanking.Count;
         float modifire = (racerCount/2 - ranking) *2;
         float roll = Random.Range(0f, 100f);
-        //roll = 10;
-        if (roll > 60f - modifire)
+        //roll = 40;
+        if (roll > 70f - modifire)
         {
             int index = Random.Range(0, traps.Count);
-            return traps[index];
+            return traps[GetBiasedIndex(traps.Count, luck)];
         }
-        else if (roll > 30 + modifire)
+        else if (roll > 40 + modifire)
         {
             int index = Random.Range(0, projectiles.Count);
-            return projectiles[index];
+            return projectiles[GetBiasedIndex(projectiles.Count, luck)];
+        }
+        else if (roll > 5 + luck)
+        {
+            int index = Random.Range(0, boosts.Count);
+            return boosts[GetBiasedIndex(boosts.Count, luck)];
         }
         else
         {
-            int index = Random.Range(0, boosts.Count);
-            return boosts[index];
+            return null;
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    int GetBiasedIndex(int count, float k = 1f)
     {
-        
+        float r = Random.value;   // 0..1
+        float biased = Mathf.Pow(r, k);
+        return Mathf.FloorToInt(biased * count);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

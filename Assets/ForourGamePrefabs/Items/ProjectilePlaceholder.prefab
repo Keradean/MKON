@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cake
   speed: 50
+  cake: {fileID: 3250604634353262537}
   layerMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 832
 --- !u!136 &3926624647594652365
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -205,5 +206,10 @@ PrefabInstance:
 --- !u!4 &2762860643125888371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9074e1ba23330cc478dd05a846ee08ad, type: 3}
+  m_PrefabInstance: {fileID: 2440139973518713496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3250604634353262537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9074e1ba23330cc478dd05a846ee08ad, type: 3}
   m_PrefabInstance: {fileID: 2440139973518713496}
   m_PrefabAsset: {fileID: 0}

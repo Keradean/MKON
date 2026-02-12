@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84fd055f0c05e10408ebd1d90d43b07e, type: 3}
-  m_Name: Projectile
+  m_Name: Cake
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 2
   ItemPrefab: {fileID: 5701566240584994825, guid: 6e5d2f8c5f5a1374f8a6a7bbd4daad17, type: 3}

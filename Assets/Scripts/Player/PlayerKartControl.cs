@@ -32,7 +32,7 @@ public class PlayerKartControl : MonoBehaviour
     [SerializeField] private float stickToGroundForce = 10f;    
     
     [Header("KartReset")]
-    [SerializeField] private Transform kartReset;
+    public Transform kartReset;
 
     private Rigidbody rb;
     public bool BreakAssist = true;

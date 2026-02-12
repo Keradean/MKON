@@ -9790,6 +9790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04033f3c357a94f83d2b959aa07cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemInventory
+  racer: {fileID: 0}
+  specialItem: {fileID: 11400000, guid: 3235d872ae1f23f478f23b83f6f95f2f, type: 2}
+  itemLuck: 0.7
 --- !u!114 &3062213126177102160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9803,6 +9806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Racer
   rankingPos: 0
+  lap: 0
+  waypointIndex: 0
+  distanceToNext: 0
   kartmesh: {fileID: 3540031077903248958}
   isAI: 1
   isShielded: 0

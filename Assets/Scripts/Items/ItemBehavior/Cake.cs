@@ -3,6 +3,7 @@ using UnityEngine;
 public class Cake : MonoBehaviour
 {
     [SerializeField] float speed = 4f;//maybe get from gamemanager
+    [SerializeField] GameObject cake;
     [SerializeField] LayerMask layerMask;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,13 +18,12 @@ public class Cake : MonoBehaviour
     {
         //move forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out RaycastHit hit, 1f, layerMask))
-        {
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-            {
-                Destroy(gameObject);
-            }
-        }
+        //rotate cake
+        cake.transform.Rotate(new Vector3(0, 720, 0) * Time.deltaTime);
+        //if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out RaycastHit hit, 1f, LayerMask.NameToLayer("Obstacle")))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
