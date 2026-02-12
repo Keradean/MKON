@@ -3,17 +3,8 @@ using UnityEngine;
 public class ProgressPoint : MonoBehaviour
 {
     public int waypointIndex;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool AIRivalSpeedControl = false;
+    public float AIRivalSetSpeed;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +15,17 @@ public class ProgressPoint : MonoBehaviour
             {
                 racer.waypointIndex = waypointIndex;
                 if (!racer.isAI) other.GetComponentInParent<PlayerKartControl>().kartReset = transform;
+            }
+        }
+        
+        
+        if(other.CompareTag("Rival_1") || other.CompareTag("Rival_2") 
+                                       || other.CompareTag("Rival_3") 
+                                       || other.CompareTag("Rival_4"))
+        {
+            if (AIRivalSpeedControl)
+            {
+                other.gameObject.GetComponentInParent<AIRivalKart>().MaxSpeed = AIRivalSetSpeed;
             }
         }
     }

@@ -87,7 +87,6 @@ namespace Unity.Splines.Examples
                     return m_Mesh;
 
                 m_Mesh = new Mesh();
-                GetComponent<MeshRenderer>().sharedMaterial = Resources.Load<Material>("Road");
                 return m_Mesh;
             }
         }

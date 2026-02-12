@@ -27,6 +27,8 @@ public class ObstacleSound : MonoBehaviour
     private bool RivalRotating;
     public AudioClip SpinSound;
     private bool _spinPlayed;
+
+    public bool RivalIsHit;
     
     private Rigidbody _rigidbody;
     void Start()
@@ -80,6 +82,7 @@ public class ObstacleSound : MonoBehaviour
 
                     if (!isPlayer)
                     {
+                        RivalIsHit = true;
                         _agent.speed = 0;
                     }
                     _hasSplat = true;
@@ -100,6 +103,7 @@ public class ObstacleSound : MonoBehaviour
 
         if (colision.gameObject.CompareTag("Player_1"))
         {
+            RivalRotating = true;
             _agent.speed = 5.5f;
             RivalRotating = true;
         }
@@ -147,6 +151,7 @@ public class ObstacleSound : MonoBehaviour
         }
         if (!isPlayer)
         {
+            RivalIsHit = true;
             _agent.speed = 0;
         }
         // Determine the current position of the kart
@@ -171,6 +176,7 @@ public class ObstacleSound : MonoBehaviour
         }
         if (!isPlayer)
         {
+            RivalIsHit = false;
             _agent.speed = 25;
         }
         if (!_audioSource.isPlaying)
@@ -191,6 +197,7 @@ public class ObstacleSound : MonoBehaviour
         }
         if (!isPlayer)
         {
+            RivalIsHit = false; 
             _agent.speed = 25;
         }
         if (!_audioSource.isPlaying && _hasSplat)
@@ -212,7 +219,8 @@ public class ObstacleSound : MonoBehaviour
 
         yield return new WaitForSeconds(3);
         RivalRotating = false;
-        _agent.speed = 10;
+        _agent.speed = 20;
+        RivalIsHit = false;
         _spinPlayed = false;
     }
 

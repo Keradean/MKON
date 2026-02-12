@@ -9,12 +9,6 @@ public class KartSound : MonoBehaviour
     public AudioSource DrivingSound;
     public AudioSource DriftSound;
     public AudioSource ReverseSound;
-    [SerializeField] AudioClip StartSoundClip;
-    [SerializeField] AudioClip IdleSoundClip;
-    [SerializeField] AudioClip DrivingSoundClip;
-    [SerializeField] AudioClip DriftSoundClip;
-    [SerializeField] AudioClip ReverseSoundClip;
-
 
     [Header("Sound Settings")]
     [Range(0f, 1f)] public float StartSoundVolume = 1f;

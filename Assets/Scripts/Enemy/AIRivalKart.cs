@@ -11,6 +11,8 @@ public class AIRivalKart : MonoBehaviour
 
     private Coroutine rocoverSpeed;
 
+    public float MaxSpeed = 15f;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -22,7 +24,23 @@ public class AIRivalKart : MonoBehaviour
         _agent.SetDestination(AiRivalWaypoints[_currentWaypoint].position);
         CheckDistanceToNextTarget();
         RotateWheels();
-        
+        if (GetComponent<ObstacleSound>().RivalIsHit == false)
+        ChangeSpeed();
+    }
+
+    private void ChangeSpeed()
+    {
+        //Speed ist zu KLEIN -> Erhöhe
+        if (_agent.speed < MaxSpeed)
+        {
+            _agent.speed += 10 * Time.deltaTime;
+        }
+    
+        // Speed ist zu GROSS -> Verringere
+        else if (_agent.speed > MaxSpeed)
+        {
+            _agent.speed -= 10 * Time.deltaTime;
+        }
     }
 
     private void CheckDistanceToNextTarget()
