@@ -53,7 +53,7 @@ public class ItemInventory : MonoBehaviour
     {
         switch (type) {
             case boostType.Speed:
-                racer.Speedboost(amount, duration);
+                racer.Speedboost(amount, duration, Vector3.zero);
                 break;
             case boostType.Shield:
                 racer.GetShieldBoost(duration);
