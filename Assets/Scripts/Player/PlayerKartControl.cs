@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI; 
+using TMPro;
 
 public class PlayerKartControl : MonoBehaviour
 {
@@ -34,6 +36,21 @@ public class PlayerKartControl : MonoBehaviour
     [Header("KartReset")]
     public Transform kartReset;
 
+    [Header("Wrong Way")] 
+    private bool _changeDirection;
+    private bool _reverse = false;  
+    
+    [Header("Speed TMP")]
+    [SerializeField] private TextMeshProUGUI speedTMP;
+    private float _kartSpeed;
+
+    [Header("position TMP")]
+    [SerializeField] private TextMeshProUGUI positionTMP;
+    
+    [Header("Wrong Way UI")]
+    [SerializeField] private GameObject wrongWayWarning; 
+
+    private Racer racer;
     private Rigidbody rb;
     public bool BreakAssist = true;
     private bool isGrounded;
@@ -69,6 +86,9 @@ public class PlayerKartControl : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        racer = GetComponentInChildren<Racer>();
+        InvokeRepeating("DisplayPosition", 0.2f, 0.2f);
+        InvokeRepeating("CheckWrongWay", 1f, 0.5f);
     }
 
     private void Update()
@@ -79,8 +99,46 @@ public class PlayerKartControl : MonoBehaviour
         UpdateWheelPositions();
     }
 
+    private void DisplayPosition()
+    {
+        if (positionTMP == null) return;
+    
+        if (racer != null)
+        {
+            positionTMP.text = GetPositionText(racer.rankingPos);
+        }
+    }
+
+    private string GetPositionText(int position)
+    {
+        if (position <= 0) return "-";
+
+       // Falls Mehrere Spieler dran teilnehmen sollen 
+       /*
+        if (position % 100 >= 11 && position % 100 <= 13)
+            return position + "th";
+        */
+        if (position % 100 >= 11 && position % 100 <= 13)
+            return position + "th";
+
+        switch (position % 10)
+        {
+            case 1: return position + "st";
+            case 2: return position + "nd";
+            case 3: return position + "rd";
+            default: return position + "th";
+        }
+    }
+
+
     private void Drive(float gas, float brake, Vector2 steer, bool drift)
     {
+        _kartSpeed = rb.linearVelocity.magnitude * 3.6f;
+        if (speedTMP != null)
+        {
+            speedTMP.text = $"{Mathf.RoundToInt(_kartSpeed)} km/h";
+        }
+        
         float speed = rb.linearVelocity.magnitude;
 
         // ---------- Speed based steering ----------
@@ -126,6 +184,11 @@ public class PlayerKartControl : MonoBehaviour
                 // Rückwärts fahren
                 motorTorque = -brake * driveTorque * 0.7f;
                 appliedBrakeTorque = 0f;
+
+                if (rb.isKinematic)
+                {
+                    StartCoroutine(ResetChangeDirection());
+                }
             }
             else
             {
@@ -243,6 +306,47 @@ public class PlayerKartControl : MonoBehaviour
             wheel.motorTorque = 0f;
             wheel.brakeTorque = 0f;
             wheel.steerAngle = 0f;
+        }
+    }
+    // Prevent going the wrong way
+    private void FaceForward()
+    {
+        if (_changeDirection) return; // Verhindere mehrfaches Triggern
+        _changeDirection = true;
+        transform.Rotate(0, 180, 0);
+        rb.isKinematic = true;
+        
+        StartCoroutine(ResetChangeDirection());
+    }
+
+    IEnumerator ResetChangeDirection()
+    {
+        yield return new WaitForSeconds(2f);
+        rb.isKinematic = false;
+        yield return new WaitForSeconds(1f);
+        _changeDirection = false;
+    }
+    
+    private void CheckWrongWay()
+    {
+        if (racer == null || GameManager.Instance == null) return;
+    
+        Transform nextWaypoint = GameManager.Instance.GetWayPoint(racer.waypointIndex + 1);
+        if (nextWaypoint == null) return;
+    
+        Vector3 directionToWaypoint = (nextWaypoint.position - transform.position).normalized;
+        float alignment = Vector3.Dot(transform.forward, directionToWaypoint);
+    
+        bool isWrongWay = alignment < -0.3f && rb.linearVelocity.magnitude > 3f;
+        
+        if (wrongWayWarning != null)
+        {
+            wrongWayWarning.SetActive(isWrongWay);
+        }
+        
+        if (alignment < -0.7f && rb.linearVelocity.magnitude > 5f)
+        {
+            FaceForward();
         }
     }
 }
