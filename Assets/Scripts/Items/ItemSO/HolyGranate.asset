@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HolyGranate
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 0
-  ItemPrefab: {fileID: 2754121494881087575, guid: 8bcac05a98b8882a785b96f72f69a309, type: 3}
+  ItemPrefab: {fileID: 4349086420089258841, guid: 1f6ac6494c5d00146b2c556e936d5e31, type: 3}
   boostEffect: 0
   boostDuration: 0
   boostAmount: 0
