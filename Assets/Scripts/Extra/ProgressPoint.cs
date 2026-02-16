@@ -7,18 +7,16 @@ public class ProgressPoint : MonoBehaviour
     public float AIRivalSetSpeed;
 
     public int ProgressNumber; 
-    public bool StartLine;
+    
 
     private void OnTriggerEnter(Collider other)
     {
         Racer racer = other.GetComponent<Racer>();
         if (racer == null) return;
-        
-        // ========== WAYPOINT VALIDIERUNG ==========
+
         if (racer.waypointIndex == waypointIndex - 1)
         {
             racer.waypointIndex = waypointIndex;
-            
             
             if (!racer.isAI)
             {
@@ -27,14 +25,12 @@ public class ProgressPoint : MonoBehaviour
                     playerKart.kartReset = transform;
             }
         }
-        
-        // ========== AI SPEED CONTROL ==========
+
         if (racer.isAI && AIRivalSpeedControl)
         {
             AIRivalKart aiKart = other.GetComponentInParent<AIRivalKart>();
             if (aiKart != null)
                 aiKart.MaxSpeed = AIRivalSetSpeed;
         }
-        
     }
 }

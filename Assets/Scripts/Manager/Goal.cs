@@ -3,7 +3,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public int wayPointCount;
-    public int roundCount;
+    public int roundCount = 3;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,10 +14,13 @@ public class Goal : MonoBehaviour
             {
                 racer.lap++;
                 racer.waypointIndex = 0;
+                
                 if (!racer.isAI) other.GetComponentInParent<PlayerKartControl>().kartReset = transform;
+                
                 if (racer.lap > roundCount) 
                 {
                     //racer.EndGame();
+                    Debug.Log("Scheiße ja !!!");
                 }
             }
         }

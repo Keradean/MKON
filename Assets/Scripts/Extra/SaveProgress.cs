@@ -1,14 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class SaveProgress : MonoBehaviour
 {
     private int ProgressNumber = 0;
     public GameObject[] InsertProgressPoints;
-    
-    // der aktuelle progress von den Karts Player wie RivalAi
-    public static int[] ProgressAmts = new int[8]; 
-    public static int[] CurrentPosition = new int[8]; 
-
+    public static bool RaceHasStarted = false;
+   
+    public static int[] ProgressAmts = new int[4]; 
+    public static int[] CurrentPosition = new int[4]; 
     void Start()
     {
         for (int i = 0; i < InsertProgressPoints.Length; i++)
@@ -17,5 +17,4 @@ public class SaveProgress : MonoBehaviour
             ProgressNumber++;
         }
     }
-
 }

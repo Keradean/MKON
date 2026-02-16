@@ -29,7 +29,16 @@ public class Racer : MonoBehaviour
         {
             aiRivalKart = GetComponentInParent<AIRivalKart>();
         }
-        GameManager.Instance.RacerRanking.Add(this);
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RacerRanking.Add(this);
+        }
+        else
+        {
+            Debug.LogError("Scheiße gell???");
+        }
+       
     }
 
     public void GetHit()
