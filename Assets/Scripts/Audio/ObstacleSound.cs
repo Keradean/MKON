@@ -178,6 +178,7 @@ public class ObstacleSound : MonoBehaviour
         {
             RivalIsHit = false;
             _agent.speed = 25;
+			_agent.isStopped = false; 
         }
         if (!_audioSource.isPlaying)
         {

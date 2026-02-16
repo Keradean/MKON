@@ -38,7 +38,6 @@ public class PlayerKartControl : MonoBehaviour
 
     [Header("Wrong Way")] 
     private bool _changeDirection;
-    private bool _reverse = false;  
     
     [Header("Speed TMP")]
     [SerializeField] private TextMeshProUGUI speedTMP;
@@ -49,6 +48,9 @@ public class PlayerKartControl : MonoBehaviour
     
     [Header("Wrong Way UI")]
     [SerializeField] private GameObject wrongWayWarning; 
+    
+    [Header("Lap TMP")]
+    [SerializeField] private TextMeshProUGUI lapTMP;
 
     private Racer racer;
     private Rigidbody rb;
@@ -87,8 +89,11 @@ public class PlayerKartControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         racer = GetComponentInChildren<Racer>();
+        Goal goal = FindFirstObjectByType<Goal>();
+        
         InvokeRepeating("DisplayPosition", 0.2f, 0.2f);
         InvokeRepeating("CheckWrongWay", 1f, 0.5f);
+        InvokeRepeating("DisplayLap", 0.2f, 0.2f); 
     }
 
     private void Update()
@@ -113,11 +118,6 @@ public class PlayerKartControl : MonoBehaviour
     {
         if (position <= 0) return "-";
 
-       // Falls Mehrere Spieler dran teilnehmen sollen 
-       /*
-        if (position % 100 >= 11 && position % 100 <= 13)
-            return position + "th";
-        */
         if (position % 100 >= 11 && position % 100 <= 13)
             return position + "th";
 
@@ -130,9 +130,27 @@ public class PlayerKartControl : MonoBehaviour
         }
     }
 
+    public void DisplayLap() 
+    {
+        if (lapTMP == null) return;
+        if (racer == null) return;
+        
+        int currentLap = racer.lap + 1;
+        
+        int totalLaps = 3;
+    
+        lapTMP.text = "Lap " + currentLap + "/" + totalLaps; 
+    }
 
     private void Drive(float gas, float brake, Vector2 steer, bool drift)
     {
+        if (!SaveProgress.RaceHasStarted)
+        {
+            gas = 0;
+            brake = 0;
+            steer = Vector2.zero;
+            drift = false; 
+        }
         _kartSpeed = rb.linearVelocity.magnitude * 3.6f;
         if (speedTMP != null)
         {
@@ -141,24 +159,19 @@ public class PlayerKartControl : MonoBehaviour
         
         float speed = rb.linearVelocity.magnitude;
 
-        // ---------- Speed based steering ----------
         float speed01 = Mathf.Clamp01(speed / maxSteerSpeed);
         float dynamicSteer = Mathf.Lerp(minSteerAngle, maxSteerAngle, speed01);
 
         float steerDir = Mathf.Clamp(steer.x, -1f, 1f);
         float targetSteerAngle = steerDir * dynamicSteer;
 
-        // ---------- Drift ----------
         bool isDrifting = drift && gas > 0.1f && isGrounded && Mathf.Abs(steerDir) > 0.1f;
 
         if (isDrifting)
         {
             targetSteerAngle *= driftSteerMultiplier;
-
             SetSidewaysFriction(driftSidewaysFriction);
-
             rb.AddTorque(Vector3.up * steerDir * 220f * Time.deltaTime, ForceMode.Acceleration);
-
             rb.AddForce(transform.forward * driftForwardForce * Time.deltaTime, ForceMode.Acceleration);
         }
         else
@@ -166,13 +179,11 @@ public class PlayerKartControl : MonoBehaviour
             SetSidewaysFriction(normalSidewaysFriction);
         }
 
-        // ---------- Motor / Brake / Reverse ----------
         float motorTorque = 0f;
         float appliedBrakeTorque = 0f;
 
         if (gas > 0f)
         {
-            // Vorwärts fahren
             motorTorque = gas * driveTorque;
         }
         else if (brake > 0f)
@@ -181,7 +192,6 @@ public class PlayerKartControl : MonoBehaviour
 
             if (forwardSpeed < 2f)
             {
-                // Rückwärts fahren
                 motorTorque = -brake * driveTorque * 0.7f;
                 appliedBrakeTorque = 0f;
 
@@ -192,7 +202,6 @@ public class PlayerKartControl : MonoBehaviour
             }
             else
             {
-                // Bremsen
                 motorTorque = 0f;
                 appliedBrakeTorque = brake * brakeTorque;
             }
@@ -204,29 +213,22 @@ public class PlayerKartControl : MonoBehaviour
             wheel.brakeTorque = appliedBrakeTorque;
         }
 
-        // ---------- Steering to front wheels ----------
         for (int i = 0; i < wheelColliders.Length; i++)
         {
             if (i < 2)
                 wheelColliders[i].steerAngle = targetSteerAngle;
         }
 
-        // ---------- High speed stability ----------
         if (speed > 15)
             rb.angularVelocity *= 0.97f;
     }
-
 
     private void SetSidewaysFriction(float stiffness)
     {
         for (int i = 0; i < wheelColliders.Length; i++)
         {
             WheelFrictionCurve friction = wheelColliders[i].sidewaysFriction;
-
-            friction.stiffness = (i >= 2)
-                ? stiffness
-                : normalSidewaysFriction;
-
+            friction.stiffness = (i >= 2) ? stiffness : normalSidewaysFriction;
             wheelColliders[i].sidewaysFriction = friction;
         }
     }
@@ -257,7 +259,6 @@ public class PlayerKartControl : MonoBehaviour
     IEnumerator ApplyAirConstraints()
     {
         airConstraintsActive = true;
-
         yield return new WaitForSeconds(0.1f);
 
         if (kartBrake == 0f || !BreakAssist)
@@ -279,9 +280,7 @@ public class PlayerKartControl : MonoBehaviour
             {
                 Vector3 pos;
                 Quaternion rot;
-            
                 wheelColliders[i].GetWorldPose(out pos, out rot);
-            
                 kartWheels[i].transform.position = pos;
                 kartWheels[i].transform.rotation = rot;
             }
@@ -292,10 +291,8 @@ public class PlayerKartControl : MonoBehaviour
     {
         transform.position = kartReset.position;
         transform.rotation = Quaternion.identity;
-
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-
         kartGas = 0f;
         kartBrake = 0f;
         kartSteer = Vector2.zero;
@@ -308,14 +305,13 @@ public class PlayerKartControl : MonoBehaviour
             wheel.steerAngle = 0f;
         }
     }
-    // Prevent going the wrong way
+    
     private void FaceForward()
     {
-        if (_changeDirection) return; // Verhindere mehrfaches Triggern
+        if (_changeDirection) return;
         _changeDirection = true;
         transform.Rotate(0, 180, 0);
         rb.isKinematic = true;
-        
         StartCoroutine(ResetChangeDirection());
     }
 
