@@ -2,30 +2,63 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.Playables;
 
 public class RaceStart : MonoBehaviour
 {
-
     public GameObject PlayerOneKart;
-
     public Transform PlayerOneSpawnPoint;
     
-    public GameObject TimelineHolder;
-
+    public PlayableDirector timeline;
+    public GameObject timelineCamera;
+    public GameObject playerCameraRig;
+    
     public TextMeshProUGUI StartText;
-
     public TextMeshProUGUI Title;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        Destroy(TimelineHolder.gameObject);
-        SpawnPlayers();
+        
+        if (timelineCamera != null)
+        {
+            timelineCamera.SetActive(true);
+        }
+
+        
+        if (playerCameraRig != null)
+        {
+            playerCameraRig.SetActive(false);
+
+        }
+
+        
+        if (timeline != null)
+        {
+            timeline.Play();
+            StartCoroutine(WaitForTimeline());
+        }
+        else
+        {
+            SpawnPlayers();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitForTimeline()
     {
+        yield return new WaitForSeconds((float)timeline.duration);
         
+        
+        if (timelineCamera != null)
+        {
+            timelineCamera.SetActive(false);
+        }
+        
+        if (playerCameraRig != null)
+        {
+            playerCameraRig.SetActive(true);
+        }
+        
+        SpawnPlayers();
     }
 
     void SpawnPlayers()
@@ -49,6 +82,5 @@ public class RaceStart : MonoBehaviour
         SaveProgress.RaceHasStarted = true;
         yield return new WaitForSeconds(1);
         StartText.text = "";
-
     }
 }
