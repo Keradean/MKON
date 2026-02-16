@@ -85,14 +85,26 @@ public class Racer : MonoBehaviour
         isShielded = false;
     }
 
-    public void Speedboost(float amount, float duration)
+    public void Speedboost(float amount, float duration, Vector3 direction)
     {
-        if(isAI)
+        CancelInvoke("EndSpeedBoost");
+        if (isAI)
         {
             aiRivalKart.ModifySpeed(25 + amount, duration);
             return;
         }
-        rb.AddForce(transform.forward * amount, ForceMode.VelocityChange);
+        if (direction == Vector3.zero)
+        {
+            direction = transform.forward;
+        }
+        else
+        {
+            if (Vector3.Dot(direction, transform.forward) < 0)
+            {
+                direction *= 2;
+            }
+        }
+        rb.AddForce(direction * amount, ForceMode.VelocityChange);
         Invoke("EndSpeedBoost", duration);
     }
 
@@ -100,5 +112,13 @@ public class Racer : MonoBehaviour
     {
         if(rb.linearVelocity.magnitude > kartControl.MaxSteerSpeed )
             rb.linearVelocity = rb.transform.forward * kartControl.MaxSteerSpeed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Speed"))
+        {
+            Speedboost(20f, 2f, other.transform.forward);
+        }
     }
 }

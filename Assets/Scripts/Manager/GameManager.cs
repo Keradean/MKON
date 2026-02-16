@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
     public List<Racer> RacerRanking = new List<Racer>();
     [SerializeField] List<GameObject> ProgressPoints = new List<GameObject>();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         if (Instance == null)
         {

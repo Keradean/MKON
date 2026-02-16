@@ -16,6 +16,7 @@ TagManager:
   - Rival_2
   - Rival_3
   - Rival_4
+  - Speed
   layers:
   - Default
   - TransparentFX
