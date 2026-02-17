@@ -3,14 +3,19 @@ using UnityEngine;
 
 public class Racer : MonoBehaviour
 {
+    public string racerName;
     public int rankingPos;
     public int lap;
     public int waypointIndex;
     public float distanceToNext;
     public float TotalProgress => lap * 100000 + waypointIndex * 1000 - distanceToNext;
 
+    public float time;
+    public float bestRoundTime = Mathf.Infinity;
+
     private Rigidbody rb;
     private PlayerKartControl kartControl;
+    private ObstacleSound obstacleSound;
     [SerializeField] Transform kartmesh;
 
     public bool isAI = false;
@@ -25,6 +30,7 @@ public class Racer : MonoBehaviour
     {
         rb = GetComponentInParent<Rigidbody>();
         kartControl = GetComponentInParent<PlayerKartControl>();
+        obstacleSound = GetComponentInParent<ObstacleSound>();
         if (isAI)
         {
             aiRivalKart = GetComponentInParent<AIRivalKart>();
@@ -121,6 +127,25 @@ public class Racer : MonoBehaviour
     {
         if(rb.linearVelocity.magnitude > kartControl.MaxSteerSpeed )
             rb.linearVelocity = rb.transform.forward * kartControl.MaxSteerSpeed;
+    }
+
+    public void LastOut()
+    {
+        obstacleSound.BurnTheKart(false);
+    }
+
+    public void EndGame()
+    {
+        GameManager.Instance.FinishedRacer.Add(this);
+        if (!isAI)//if its the player of this kart
+        {
+            GameObject.Find("EndScreen").GetComponent<EndScreen>().ActivateEndScreen(this);
+        }
+        else
+        {
+            GameObject.Find("EndScreen").GetComponent<EndScreen>().UpdateRanking();
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)

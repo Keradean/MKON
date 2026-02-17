@@ -93,12 +93,7 @@ public class ObstacleSound : MonoBehaviour
 
         if (colision.gameObject.CompareTag("Burn"))
         {
-            if (!_hasBurned)
-            {
-                _hasBurned = true;
-                StartCoroutine(StopTheKart());
-                BurnEffect.SetActive(true); 
-            }
+            BurnTheKart(true);
         }
 
         if (colision.gameObject.CompareTag("Player_1"))
@@ -112,6 +107,16 @@ public class ObstacleSound : MonoBehaviour
             colision.gameObject.CompareTag("Rival_3") || colision.gameObject.CompareTag("Rival_4"))
         {
             StartCoroutine(PlayerReact());
+        }
+    }
+
+    public void BurnTheKart(bool respawn)
+    {
+        if (!_hasBurned)
+        {
+            _hasBurned = true;
+            StartCoroutine(StopTheKart(respawn));
+            BurnEffect.SetActive(true);
         }
     }
 
@@ -134,7 +139,7 @@ public class ObstacleSound : MonoBehaviour
         }  
     }
 
-    IEnumerator StopTheKart()
+    IEnumerator StopTheKart(bool respawn)
     {
         yield return new WaitForSeconds(0.2f);
         _hasBurned = true;
@@ -165,25 +170,32 @@ public class ObstacleSound : MonoBehaviour
         }
         // Kart disappears temporarily
         transform.localScale = new Vector3(0, 0, 0);
-        yield return new WaitForSeconds(2);
-        // Kart reappears and engine noises are working again
-        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        EngineRunning.SetActive(true);
-        // Kart darf sich wieder bewegen 
-        if (isPlayer)
+        if (respawn)
         {
-            _rigidbody.isKinematic = false;
+            yield return new WaitForSeconds(2);
+            // Kart reappears and engine noises are working again
+            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            EngineRunning.SetActive(true);
+            // Kart darf sich wieder bewegen 
+            if (isPlayer)
+            {
+                _rigidbody.isKinematic = false;
+            }
+            if (!isPlayer)
+            {
+                RivalIsHit = false;
+                _agent.speed = 25;
+			    _agent.isStopped = false; 
+            }
+            if (!_audioSource.isPlaying)
+            {
+                _audioSource.clip = Return;
+                _audioSource.Play();
+            }
         }
-        if (!isPlayer)
+        else
         {
-            RivalIsHit = false;
-            _agent.speed = 25;
-			_agent.isStopped = false; 
-        }
-        if (!_audioSource.isPlaying)
-        {
-            _audioSource.clip = Return;
-            _audioSource.Play();
+
         }
     }
 

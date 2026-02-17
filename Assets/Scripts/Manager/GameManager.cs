@@ -5,7 +5,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public List<Racer> RacerRanking = new List<Racer>();
+    public List<Racer> FinishedRacer = new List<Racer>();
     [SerializeField] List<GameObject> ProgressPoints = new List<GameObject>();
+    public GameMode gameMode;
+    public Track track;
+
 
     void Awake()
     {
@@ -40,4 +44,17 @@ public class GameManager : MonoBehaviour
         if (index >= ProgressPoints.Count) index = 0;
         return ProgressPoints[index].transform;
     }
+}
+
+public enum GameMode
+{
+    normal,
+    lastOut
+}
+
+public enum Track
+{
+    Desert,
+    Snow,
+    Devil
 }
