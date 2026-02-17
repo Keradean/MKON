@@ -6,6 +6,7 @@ public class SaveProgress : MonoBehaviour
     private int ProgressNumber = 0;
     public GameObject[] InsertProgressPoints;
     public static bool RaceHasStarted = false;
+    public static bool RaceHasEnded = false;
    
     public static int[] ProgressAmts = new int[4]; 
     public static int[] CurrentPosition = new int[4]; 

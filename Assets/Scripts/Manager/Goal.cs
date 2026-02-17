@@ -19,8 +19,14 @@ public class Goal : MonoBehaviour
                 
                 if (racer.lap > roundCount) 
                 {
-                    //racer.EndGame();
-                    Debug.Log("Scheiße ja !!!");
+                    if (!racer.isAI && racer.lap >= roundCount)
+                    {
+                        SaveProgress.RaceHasEnded = true;
+                        SaveProgress.RaceHasStarted = false;
+                        
+                        if(RaceEndScreen.Instance != null)
+                            RaceEndScreen.Instance.ShowEndScreen();
+                    }
                 }
             }
         }
