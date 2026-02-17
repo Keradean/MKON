@@ -47,7 +47,7 @@ public class PlayerKartControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI positionTMP;
     
     [Header("Wrong Way UI")]
-    [SerializeField] private GameObject wrongWayWarning; 
+    [SerializeField] private TextMeshProUGUI  wrongWayWarning; 
     
     [Header("Lap TMP")]
     [SerializeField] private TextMeshProUGUI lapTMP;
@@ -85,6 +85,15 @@ public class PlayerKartControl : MonoBehaviour
     }
     #endregion
 
+    private void Awake()
+    {
+        speedTMP = GameObject.Find("SpeedTMP").GetComponent<TextMeshProUGUI>();
+        positionTMP = GameObject.Find("PositionTMP").GetComponent<TextMeshProUGUI>();
+        lapTMP = GameObject.Find("LapTMP").GetComponent<TextMeshProUGUI>();
+        GameObject wrongWayPanel = GameObject.Find("Panel - WrongWay");
+        wrongWayWarning = wrongWayPanel.GetComponentInChildren<TextMeshProUGUI>(true); 
+    }
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -337,7 +346,7 @@ public class PlayerKartControl : MonoBehaviour
         
         if (wrongWayWarning != null)
         {
-            wrongWayWarning.SetActive(isWrongWay);
+            wrongWayWarning.enabled = isWrongWay;
         }
         
         if (alignment < -0.7f && rb.linearVelocity.magnitude > 5f)
