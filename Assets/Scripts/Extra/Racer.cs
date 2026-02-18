@@ -105,7 +105,7 @@ public class Racer : MonoBehaviour
         CancelInvoke("EndSpeedBoost");
         if (isAI)
         {
-            aiRivalKart.ModifySpeed(25 + amount, duration);
+            aiRivalKart.SpeedBoost(amount, duration);
             return;
         }
         if (direction == Vector3.zero)
@@ -138,7 +138,7 @@ public class Racer : MonoBehaviour
     {
         if (!isAI)
         {
-            kartControl.ModifySpeed(-20, 3f);
+           // kartControl.ModifySpeed(-20, 3f);
         }
         else
         {

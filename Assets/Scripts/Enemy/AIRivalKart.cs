@@ -84,8 +84,8 @@ public class AIRivalKart : MonoBehaviour
 
     public void LastOutSpeed(int ranking)
     {
-        MaxSpeed = MaxSpeed * (1 + (ranking / 50)); // Adjust the speed based on the ranking
-        accellerationSpeed = accellerationSpeed * (1 + (ranking / 50)); // Adjust the acceleration based on the ranking
+        MaxSpeed = MaxSpeed * (float)(1 + (ranking * 0.02)); // Adjust the speed based on the ranking
+        accellerationSpeed = accellerationSpeed * (float)(1 + (ranking * 0.02)); // Adjust the acceleration based on the ranking
     }
 
     private IEnumerator RecoverSpeed(float duration)

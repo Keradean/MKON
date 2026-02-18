@@ -331,7 +331,7 @@ public class PlayerKartControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _changeDirection = false;
     }
-    
+   /* 
     private void CheckWrongWay()
     {
         if (racer == null || GameManager.Instance == null) return;
@@ -353,5 +353,10 @@ public class PlayerKartControl : MonoBehaviour
         {
             FaceForward();
         }
+    }
+   */
+    public void LastOutModify(int ranking)
+    {
+
     }
 }
