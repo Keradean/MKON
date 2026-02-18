@@ -12,6 +12,7 @@ public class AIRivalKart : MonoBehaviour
     private Coroutine rocoverSpeed;
 
     public float MaxSpeed = 15f;
+    private float accellerationSpeed = 10f;
 
     void Start()
     {
@@ -33,7 +34,7 @@ public class AIRivalKart : MonoBehaviour
         //Speed ist zu KLEIN -> Erhöhe
         if (_agent.speed < MaxSpeed)
         {
-            _agent.speed += 10 * Time.deltaTime;
+            _agent.speed += accellerationSpeed * Time.deltaTime;
         }
     
         // Speed ist zu GROSS -> Verringere
@@ -45,7 +46,7 @@ public class AIRivalKart : MonoBehaviour
 
     private void CheckDistanceToNextTarget()
     {
-        if (_agent.remainingDistance <= _agent.stoppingDistance + 15f && _checkDistance)
+        if (_agent.remainingDistance <= _agent.stoppingDistance + 20f && _checkDistance)
         {
             if (_currentWaypoint < AiRivalWaypoints.Length - 1)
             {
@@ -74,17 +75,23 @@ public class AIRivalKart : MonoBehaviour
         _checkDistance = true;
     }
 
-    public void ModifySpeed(float amount, float duration)
+    public void SpeedBoost(float amount, float duration)
     {
         _agent.speed = amount;
         if (rocoverSpeed != null)StopCoroutine(rocoverSpeed);
         rocoverSpeed = StartCoroutine(RecoverSpeed(duration));
     }
 
+    public void LastOutSpeed(int ranking)
+    {
+        MaxSpeed = MaxSpeed * (1 + (ranking / 50)); // Adjust the speed based on the ranking
+        accellerationSpeed = accellerationSpeed * (1 + (ranking / 50)); // Adjust the acceleration based on the ranking
+    }
+
     private IEnumerator RecoverSpeed(float duration)
     {
         yield return new WaitForSeconds(duration);
-        _agent.speed = 25f; // Reset to original speed
+        _agent.speed = MaxSpeed; // Reset to original speed
     }
 
 }

@@ -58,7 +58,7 @@ public class Racer : MonoBehaviour
         }
         else
         {
-            aiRivalKart.ModifySpeed(0, 1.1f);
+            aiRivalKart.SpeedBoost(0, 1.1f);
         }
         hittimer = 1f;
     }
@@ -132,6 +132,18 @@ public class Racer : MonoBehaviour
     public void LastOut()
     {
         obstacleSound.BurnTheKart(false);
+    }
+
+    public void GetLastOutModifire()
+    {
+        if (!isAI)
+        {
+            kartControl.ModifySpeed(-20, 3f);
+        }
+        else
+        {
+            aiRivalKart.LastOutSpeed(rankingPos);
+        }
     }
 
     public void EndGame()
