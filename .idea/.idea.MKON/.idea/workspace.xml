@@ -6,11 +6,95 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TimelineAnimation/TimelineHolderTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TimelineAnimation/TimelineHolderTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TinyMap/TinyMapTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TinyMap/TinyMapTexture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup/New Terrain.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup/New Terrain.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup/Track 1 layout.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Drive Setup/Track 1 layout.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/NavMesh-NavMesh Surface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/NavMesh-NavMesh Surface.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/New Terrain 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/New Terrain 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Track3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race Track 3 - desert/Track3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 Forest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 Forest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/NavMesh-NavMesh Surface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/NavMesh-NavMesh Surface.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/New Terrain 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/New Terrain 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-147066.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-147066.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284(Clone) 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284(Clone) 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284(Clone).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284(Clone).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-36284.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-44542.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ProBuilder Meshes/pb_Mesh-44542.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/SplineTrack1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/SplineTrack1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Track1.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 1 layout/Track1.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/NavMesh-NavMesh Surface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/NavMesh-NavMesh Surface.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/New Terrain 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/New Terrain 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ProBuilder Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ProBuilder Meshes/pb_Mesh-15242.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ProBuilder Meshes/pb_Mesh-15242.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ProBuilder Meshes/pb_Mesh-61242.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ProBuilder Meshes/pb_Mesh-61242.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Track2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Track2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Track2Lighting.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 2 Snow/Track2Lighting.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 3 Desert.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 3 Desert/Track 3.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdParty/Premade/Race track 3 Desert/Track 3.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/All UI/Menu/Main Title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/All UI/Menu/Main Title.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +120,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AIRivalKart.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extra/Obstacle/HorseStatue/FireBreathManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extra/Racer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Spline_Samples/Splines/2.8.2/Spline Examples (requires Shader Graph package)/Runtime/LoftRoadBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@f5957b19e230/Runtime/UniversalRendererRenderGraph.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@e5423e5d0d2a/Editor/Data/Nodes/Math/Range/FractionNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <McpServerCommand sourceId="UserConfigurationSource">
@@ -64,7 +148,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -84,7 +168,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "MainMenu",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,6 +258,7 @@
       <workItem from="1771227328551" duration="1700000" />
       <workItem from="1771229049573" duration="6909000" />
       <workItem from="1771316120817" duration="1277000" />
+      <workItem from="1771402112281" duration="8838000" />
     </task>
     <servers />
   </component>
@@ -182,6 +268,7 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
