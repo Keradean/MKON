@@ -23,7 +23,7 @@ public class RaceStart : MonoBehaviour
         {
             timelineCamera.SetActive(true);
         }
-
+        
         
         if (playerCameraRig != null)
         {
