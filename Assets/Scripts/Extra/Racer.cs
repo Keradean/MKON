@@ -146,6 +146,11 @@ public class Racer : MonoBehaviour
             GameObject.Find("EndScreen").GetComponent<EndScreen>().UpdateRanking();
 
         }
+        if(GameManager.Instance.FinishedRacer.Count == GameManager.Instance.RacerRanking.Count)
+        {
+            // All racers have finished, show end screen for all
+            GameObject.Find("EndScreen").GetComponent<EndScreen>().ActivateEndScreen(null);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

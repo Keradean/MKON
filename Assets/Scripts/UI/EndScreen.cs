@@ -19,13 +19,13 @@ public class EndScreen : MonoBehaviour
         endScreenPanel.SetActive(true);
 
         UpdateRanking();
-
-        playerTimeTMP.text = player.time.ToString("F2") + "s";
-        playerRoundTMP.text = player.bestRoundTime.ToString("F2") + "s";
-
-        // Databasemanager.SaveHighscore(player.time, player.bestRoundTime);
-        // Databasemanager.GetHighscroe();
-
+        if(player != null)
+        {
+            playerTimeTMP.text = player.time.ToString("F2") + "s";
+            playerRoundTMP.text = player.bestRoundTime.ToString("F2") + "s";
+            // Databasemanager.SaveHighscore(player.time, player.bestRoundTime);
+            // Databasemanager.GetHighscroe();
+        }
 
     }
 

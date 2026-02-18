@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3968408633044226302}
   - component: {fileID: 3637353553038443953}
   - component: {fileID: -1844207137248427320}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TrackRedMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 2, z: 1.25}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 2.5, y: 5, z: 1.25}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &-1844207137248427320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3fe39e96c912394985585392b05e6fb, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
