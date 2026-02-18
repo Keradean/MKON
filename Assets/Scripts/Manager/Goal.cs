@@ -25,6 +25,10 @@ public class Goal : MonoBehaviour
             if (racer.waypointIndex == wayPointCount - 1)
             {
                 racer.lap++;
+                if (GameManager.Instance.gameMode == GameMode.lastOut)
+                {
+                    racer.GetLastOutModifire();
+                }
                 if (racer.lap > currentLap)
                 {
                     currentLap = racer.lap;
