@@ -10,6 +10,7 @@ public class DatabaseManager : MonoBehaviour
 
     [Header("API Base URL (no trailing slash)")]
     [SerializeField] private string baseUrl = "http://localhost/MKON";
+    public bool IsDatabaseOnline { get; private set; } = false;
 
     // Response structure for fetching times
     [Serializable]
@@ -39,11 +40,15 @@ public class DatabaseManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // =====================================================================
-    // START — TEST LOGIC
-    // =====================================================================
     void Start()
     {
+        // Test database connection on startup
+        StartCoroutine(TestDatabaseConnection());
+        if (!IsDatabaseOnline)
+        {
+            Debug.LogError("Cannot perform further tests without a database connection.");
+            return;
+        }
         // Map used for testing
         string testMap = "DesertCity";
 
@@ -63,28 +68,43 @@ public class DatabaseManager : MonoBehaviour
             UpdateRoundTime(testMap, newRound);
 
             Debug.Log($"Updating times for {testMap}...");
-
-            // 3) Fetch again after a short delay so the server has time to update
-            StartCoroutine(DelayedFetch(testMap));*/
+            */
         });
+
     }
 
-    // Helper coroutine to fetch values after a delay
-    private IEnumerator DelayedFetch(string map)
+    private IEnumerator TestDatabaseConnection()
     {
-        // Wait 1 second before fetching again
-        yield return new WaitForSeconds(1f);
+        string testMap = "DesertCity";
 
-        // Fetch updated values
-        FetchTimes(map, (race, round) =>
+        Debug.Log("Testing database connection...");
+
+        bool resultReceived = false;
+
+        // Try fetching times
+        FetchTimes(testMap, (race, round) =>
         {
-            Debug.Log($"[After Update] {map} -> RaceTime: {race}, RoundTime: {round}");
+            // If race < 0, FetchTimes already signaled an error
+            if (race < 0)
+            {
+                IsDatabaseOnline = false;
+                Debug.LogError("Database connection failed.");
+            }
+            else
+            {
+                IsDatabaseOnline = true;
+                Debug.Log("Database connection OK.");
+            }
+
+            resultReceived = true;
         });
+
+        // Wait until callback arrives
+        while (!resultReceived)
+            yield return null;
     }
 
-    // =====================================================================
     // FETCH TIMES FROM DATABASE
-    // =====================================================================
     public void FetchTimes(string mapName, Action<float, float> onResult)
     {
         StartCoroutine(FetchTimesCoroutine(mapName, onResult));
@@ -123,9 +143,7 @@ public class DatabaseManager : MonoBehaviour
         onResult?.Invoke(res.raceTime, res.roundTime);
     }
 
-    // =====================================================================
     // UPDATE TIME (RaceTime or RoundTime)
-    // =====================================================================
     public void UpdateRaceTime(string mapName, float newTime)
     {
         UpdateTime(mapName, newTime, "RaceTime");
