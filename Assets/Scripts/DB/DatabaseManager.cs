@@ -53,10 +53,10 @@ public class DatabaseManager : MonoBehaviour
         FetchTimes(testMap, (race, round) =>
         {
             Debug.Log($"[Before Update] {testMap} -> RaceTime: {race}, RoundTime: {round}");
-
+            /*
             // 2) Define new test values to overwrite the database entries
-            float newRace = 343.24f;
-            float newRound = 80.45f;
+            float newRace = 510.43f;
+            float newRound = 150.43f;
 
             // Send update requests to the server
             UpdateRaceTime(testMap, newRace);
@@ -65,7 +65,7 @@ public class DatabaseManager : MonoBehaviour
             Debug.Log($"Updating times for {testMap}...");
 
             // 3) Fetch again after a short delay so the server has time to update
-            StartCoroutine(DelayedFetch(testMap));
+            StartCoroutine(DelayedFetch(testMap));*/
         });
     }
 
