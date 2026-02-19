@@ -8,7 +8,8 @@ public class Coconut : MonoBehaviour
 
     [SerializeField] LayerMask layerMask;
     [SerializeField] float speed = 40f;
-    private float windUpTime = 0.4f;
+
+    private Vector3 lastKnownTargetPos;
 
     void Start()
     {
@@ -16,34 +17,52 @@ public class Coconut : MonoBehaviour
         _agent.speed = speed;
         _agent.acceleration = 999f;
         _agent.obstacleAvoidanceType = UnityEngine.AI.ObstacleAvoidanceType.NoObstacleAvoidance;
+        _agent.updateRotation = false;
+        _agent.updatePosition = false;
         _agent.enabled = false;
     }
 
     void Update()
     {
-        if (windUpTime > 0)
-        {
-            windUpTime -= Time.deltaTime;
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            return;
-        }
 
+        // activate agent
         if (!_agent.enabled)
         {
             _agent.enabled = true;
             StartCoroutine(UpdatePath());
         }
+        //rotate the nut 
+        if (_agent.hasPath)
+        {
+            Vector3 dir = _agent.steeringTarget - transform.position;
+            dir.y = 0;
+
+            if (dir.sqrMagnitude > 0.01f)
+            {
+                transform.rotation = Quaternion.LookRotation(dir);
+            }
+        }
+
+        // Move Coconut
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     private IEnumerator UpdatePath()
     {
-        // 1 Frame warten, bis Agent initialisiert ist
         yield return null;
 
         while (true)
         {
-            _agent.SetDestination(target.transform.position);
-            yield return new WaitForSeconds(0.1f);
+            if (target != null)
+            {
+                lastKnownTargetPos = target.transform.position;
+                _agent.SetDestination(lastKnownTargetPos);
+            }
+
+            // change update rate based on distance to target, update more often when close to target for better tracking, less often when far away to save performance
+            float updateRate = Vector3.Distance(transform.position, lastKnownTargetPos) < 10f ? 0.2f : 0.5f;
+
+            yield return new WaitForSeconds(updateRate);
         }
     }
 

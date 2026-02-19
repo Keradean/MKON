@@ -101,7 +101,7 @@ public class PlayerKartControl : MonoBehaviour
         Goal goal = FindFirstObjectByType<Goal>();
         
         InvokeRepeating("DisplayPosition", 0.2f, 0.2f);
-        InvokeRepeating("CheckWrongWay", 1f, 0.5f);
+        //InvokeRepeating("CheckWrongWay", 1f, 0.5f);
         InvokeRepeating("DisplayLap", 0.2f, 0.2f); 
     }
 

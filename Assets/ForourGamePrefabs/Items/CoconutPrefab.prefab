@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2892447596734719789}
   - component: {fileID: 3647432134734712809}
   - component: {fileID: 1573840522202570053}
-  - component: {fileID: 783850606537197323}
+  - component: {fileID: 5868464689533476953}
   m_Layer: 9
   m_Name: CoconutPrefab
   m_TagString: Untagged
@@ -51,7 +51,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 832
-  speed: 40
+  speed: 80
 --- !u!195 &1573840522202570053
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -74,8 +74,8 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &783850606537197323
-CapsuleCollider:
+--- !u!65 &5868464689533476953
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,10 +92,8 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &3594699006354576412
 PrefabInstance:

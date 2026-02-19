@@ -45,7 +45,7 @@ public class Item : ScriptableObject
     }
     private void ActivateProjectile()
     {
-        Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 3f;
+        Vector3 spawn = user.transform.position + new Vector3(0, 0.2f, 0) + user.transform.forward * 4f;
         GameObject proj = Instantiate(ItemPrefab, spawn, user.transform.rotation);
         if (proj.TryGetComponent(out Coconut coconut))
         {
