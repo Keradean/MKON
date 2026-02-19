@@ -12,6 +12,7 @@ public class RaceStart : MonoBehaviour
     public PlayableDirector timeline;
     public GameObject timelineCamera;
     public GameObject playerCameraRig;
+    public GameObject[] KartPrefabs;
     
     public TextMeshProUGUI StartText;
     public TextMeshProUGUI Title;
@@ -63,6 +64,7 @@ public class RaceStart : MonoBehaviour
 
     void SpawnPlayers()
     {
+        int selectedKartIndex = MemoryManager.KartId;
         Instantiate(PlayerOneKart, PlayerOneSpawnPoint.position, PlayerOneSpawnPoint.rotation);
         StartCoroutine(Countdown());
     }
