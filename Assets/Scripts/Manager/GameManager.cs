@@ -4,6 +4,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public string currentMapName = "DesertCity";
+
     public List<Racer> RacerRanking = new List<Racer>();
     public List<Racer> FinishedRacer = new List<Racer>();
     [SerializeField] List<GameObject> ProgressPoints = new List<GameObject>();
