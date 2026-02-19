@@ -65,6 +65,19 @@ public class MenuButtons : MonoBehaviour
     
         UpdateKartDisplay();
     }
+    
+    public void BackToMainMenu()
+    {
+        //Resets the menu to the main menu state
+        _canvasObjects[0].SetActive(true);
+        _canvasObjects[1].SetActive(false);
+        DisplayKarts.SetActive(false);
+        for(int i = 0; i < BackAndForwardButtons.Length; i++)
+        {
+            BackAndForwardButtons[i].SetActive(false);
+        }
+        _KartsVisible = false;
+    }
 
     private void UpdateKartDisplay()
     {
