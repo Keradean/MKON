@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fc62423befe79458e197f15b3c2b72, type: 3}
+  m_Name: Dennis
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  acceleration: 1
+  brakePower: 300
+  enginePower: 600
+  maxSpeed: 50
+  luck: 1
+  gripFactor: 0.683
+  maxSteerAngle: 10
+  steerResponse: 0.5
+  driftSideForce: 800
+  driftGripLoss: 0.6
+  driftSteerMultiplier: 1.5
+  driftAngle: 30
