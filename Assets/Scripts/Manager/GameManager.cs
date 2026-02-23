@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> ProgressPoints = new List<GameObject>();
     public GameMode gameMode;
     public Track track;
-    public bool raceStarted;
+    public bool raceStarted = false;
 
 
     void Awake()

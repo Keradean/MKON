@@ -20,7 +20,7 @@ public class ProgressPoint : MonoBehaviour
             
             if (!racer.isAI)
             {
-                PlayerKartControl playerKart = other.GetComponentInParent<PlayerKartControl>();
+                KartController playerKart = other.GetComponentInParent<KartController>();
                 if (playerKart != null)
                     playerKart.kartReset = transform;
             }

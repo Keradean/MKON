@@ -214,8 +214,6 @@ Transform:
   m_Children:
   - {fileID: 2918212560822555871}
   - {fileID: 4710733333324379427}
-  - {fileID: 6653328156341591063}
-  - {fileID: 285364855303059477}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8904113282002841403
@@ -5284,13 +5282,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3311334206132698280}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.646, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7222128992295599232}
-  m_Father: {fileID: 9054159231802181252}
+  m_Father: {fileID: 2918212560822555871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3405958857526597592
 GameObject:
@@ -25243,6 +25241,8 @@ Transform:
   - {fileID: 5630662527471332237}
   - {fileID: 5441515148706760941}
   - {fileID: 2617175194658538916}
+  - {fileID: 6653328156341591063}
+  - {fileID: 285364855303059477}
   m_Father: {fileID: 9054159231802181252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8889210969297897652
@@ -25489,8 +25489,8 @@ Transform:
   m_GameObject: {fileID: 6649989186076578767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.27061722, z: -0, w: 0.9626871}
-  m_LocalPosition: {x: 617.67004, y: 0.45999998, z: 529.74994}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 411.78003, y: -0.124000035, z: 353.16663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8064099915582851226}
@@ -25498,7 +25498,7 @@ Transform:
   - {fileID: 4325307405549988411}
   - {fileID: 8528827850092594460}
   - {fileID: 6905441037183572502}
-  m_Father: {fileID: 9054159231802181252}
+  m_Father: {fileID: 2918212560822555871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &292427846563972150
 AudioSource:

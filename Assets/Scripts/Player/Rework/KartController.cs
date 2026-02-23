@@ -275,7 +275,7 @@ public class KartController : MonoBehaviour
         float accelStat = Mathf.Clamp01(characterSO.acceleration);
 
         // Earlier torque peak for high-acceleration characters
-        float peakShift = Mathf.Lerp(0.4f, 0.2f, accelStat);
+        float peakShift = Mathf.Lerp(0.3f, 0.1f, accelStat);
 
         // Sigmoid rise at low speed
         float earlyBoost = 1f / (1f + Mathf.Exp(-10f * (normalized - peakShift)));

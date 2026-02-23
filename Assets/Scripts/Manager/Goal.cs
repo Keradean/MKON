@@ -43,7 +43,7 @@ public class Goal : MonoBehaviour
                 }
                 racer.waypointIndex = 0;
                 
-                if (!racer.isAI) other.GetComponentInParent<PlayerKartControl>().kartReset = transform;
+                if (!racer.isAI) other.GetComponentInParent<KartController>().kartReset = transform;
                 
                 if (racer.lap > roundCount && GameManager.Instance.gameMode == GameMode.normal) 
                 {
