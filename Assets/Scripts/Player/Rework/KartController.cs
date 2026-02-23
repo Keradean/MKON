@@ -138,7 +138,7 @@ public class KartController : MonoBehaviour
         {
             isDrifting = true;
         }
-        else if ((!driftInput || Mathf.Abs(steerInput.x) > 0.1f) && isDrifting )
+        else if ((!driftInput || !(Mathf.Abs(steerInput.x) > 0.1f)) && isDrifting )
         {
             isDrifting = false;
         }
@@ -173,7 +173,7 @@ public class KartController : MonoBehaviour
 
 
                 // --- ACCELERATION ---
-                Vector3 accelDir = wheel.transform.forward;
+                Vector3 accelDir = transform.forward;
                 float carSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
 
                 float availableTorque = CalculateAcceleration(Mathf.Abs(carSpeed)) * accelerationInput * characterSO.enginePower;
