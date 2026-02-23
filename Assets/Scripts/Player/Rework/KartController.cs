@@ -8,13 +8,13 @@ public class KartController : MonoBehaviour
     [SerializeField] GameObject[] wheels;
     [SerializeField] float wheelMass;
     private Rigidbody rb;
+    private Racer racer;
+    private bool isDrifting = false;
 
     [Header("Suspension Spring")]
     [SerializeField] float suspensionRestDist;
     [SerializeField] float verticalStrenght;
     [SerializeField] float dampingStrenght;
-    private bool isDrifting = false;
-
 
     private float accelerationInput;
     private float brakeInput;
@@ -31,7 +31,6 @@ public class KartController : MonoBehaviour
     [Header("Lap TMP")]
     [SerializeField] private TextMeshProUGUI lapTMP;
 
-    private Racer racer;
 
 
     #region Input ActionMap
@@ -83,7 +82,6 @@ public class KartController : MonoBehaviour
         Goal goal = FindFirstObjectByType<Goal>();
 
         InvokeRepeating("DisplayPosition", 0.2f, 0.2f);
-        //InvokeRepeating("CheckWrongWay", 1f, 0.5f);
         InvokeRepeating("DisplayLap", 0.2f, 0.2f);
     }
 
@@ -134,23 +132,35 @@ public class KartController : MonoBehaviour
         if (speedTMP != null)
             speedTMP.text = $"{Mathf.RoundToInt(_kartSpeed)} km/h";
 
+        // --- DRIFT STATE MANAGEMENT ---
         if (driftInput && !isDrifting)
         {
             isDrifting = true;
         }
-        else if (!driftInput && isDrifting)
+        else if ((!driftInput || Mathf.Abs(steerInput.x) > 0.1f) && isDrifting )
         {
             isDrifting = false;
         }
+
+        // --- GROUND CHECK ---
+        if (!Physics.Raycast(transform.position, -transform.up, out RaycastHit groundRay, 3.01f))
+        {
+            //Airborne behavior
+            //rotate in air so that the kart is always facing forward
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.forward, Vector3.up), Time.fixedDeltaTime * 2f);
+            // Apply a downward force to simulate gravity and keep the kart grounded
+            rb.AddForce(Vector3.down, ForceMode.Force);
+        }
+
         // --- WHEEL PHYSICS ---
         foreach (GameObject wheel in wheels)
         {
             if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out RaycastHit wheelRay, 3f))
             {
+                // --- SUSPENSION ---
                 Vector3 springDir = wheel.transform.up;
                 Vector3 wheelWorldVel = rb.GetPointVelocity(wheel.transform.position);
 
-                // --- SUSPENSION ---
                 float offset = suspensionRestDist - wheelRay.distance;
                 float springVel = Vector3.Dot(springDir, wheelWorldVel);
 
@@ -162,13 +172,11 @@ public class KartController : MonoBehaviour
 
 
                 // --- ACCELERATION ---
-                Vector3 accelDir = transform.forward;
+                Vector3 accelDir = wheel.transform.forward;
                 float carSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
 
-                float availableTorque = CalculateAcceleration(Mathf.Abs(carSpeed))
-                                        * accelerationInput
-                                        * characterSO.enginePower;
-
+                float availableTorque = CalculateAcceleration(Mathf.Abs(carSpeed)) * accelerationInput * characterSO.enginePower;
+                //minimum torque to prevent stalling at low speeds
                 if (accelerationInput > 0.1f)
                     availableTorque = Mathf.Max(20f, availableTorque);
 
@@ -229,7 +237,6 @@ public class KartController : MonoBehaviour
 
             }
 
-
             // --- VISUAL STEERING (FRONT WHEELS ONLY) ---
             if (wheel == wheels[0] || wheel == wheels[1])
             {
@@ -259,12 +266,13 @@ public class KartController : MonoBehaviour
 
     private float CalculateAcceleration(float speed)
     {
+        //current speed percent of max speed (0 to 1)
         float normalized = Mathf.Clamp01(speed / characterSO.maxSpeed);
 
         float accelStat = Mathf.Clamp01(characterSO.acceleration);
 
         // Earlier torque peak for high-acceleration characters
-        float peakShift = Mathf.Lerp(0.2f, 0.1f, accelStat);
+        float peakShift = Mathf.Lerp(0.4f, 0.2f, accelStat);
 
         // Sigmoid rise at low speed
         float earlyBoost = 1f / (1f + Mathf.Exp(-10f * (normalized - peakShift)));
