@@ -14,7 +14,7 @@ public class Racer : MonoBehaviour
     public float bestRoundTime = Mathf.Infinity;
 
     private Rigidbody rb;
-    private PlayerKartControl kartControl;
+    private KartController kartControl;
     private ObstacleSound obstacleSound;
     [SerializeField] Transform kartmesh;
 
@@ -29,7 +29,7 @@ public class Racer : MonoBehaviour
     void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
-        kartControl = GetComponentInParent<PlayerKartControl>();
+        kartControl = GetComponentInParent<KartController>();
         obstacleSound = GetComponentInParent<ObstacleSound>();
         if (isAI)
         {
@@ -125,8 +125,8 @@ public class Racer : MonoBehaviour
 
     private void EndSpeedBoost()
     {
-        if(rb.linearVelocity.magnitude > kartControl.MaxSteerSpeed )
-            rb.linearVelocity = rb.transform.forward * kartControl.MaxSteerSpeed;
+        if(rb.linearVelocity.magnitude > kartControl.characterSO.maxSpeed )
+            rb.linearVelocity = rb.transform.forward * kartControl.characterSO.maxSpeed;
     }
 
     public void LastOut()
@@ -138,7 +138,7 @@ public class Racer : MonoBehaviour
     {
         if (!isAI)
         {
-           // kartControl.ModifySpeed(-20, 3f);
+            kartControl.LastOutModify(rankingPos);
         }
         else
         {

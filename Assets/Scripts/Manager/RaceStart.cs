@@ -1,20 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 using UnityEngine.Playables;
 
 public class RaceStart : MonoBehaviour
 {
-    public GameObject PlayerOneKart;
-    public Transform PlayerOneSpawnPoint;
+    public GameObject[] playerKart;
+    public GameObject[] aiKartPrefabs;
+    public Transform[] spawnPoints;
     
     public PlayableDirector timeline;
     public GameObject timelineCamera;
     public GameObject playerCameraRig;
+    public GameObject[] kartPrefabs;
     
-    public TextMeshProUGUI StartText;
-    public TextMeshProUGUI Title;
+    public TextMeshProUGUI startText;
+    public TextMeshProUGUI title;
     
     void Start()
     {
@@ -47,40 +48,40 @@ public class RaceStart : MonoBehaviour
     {
         yield return new WaitForSeconds((float)timeline.duration);
         
-        
-        if (timelineCamera != null)
-        {
-            timelineCamera.SetActive(false);
-        }
-        
-        if (playerCameraRig != null)
-        {
-            playerCameraRig.SetActive(true);
-        }
-        
+        timelineCamera?.SetActive(false);
+
+        playerCameraRig?.SetActive(true);
+
         SpawnPlayers();
     }
 
     void SpawnPlayers()
     {
-        Instantiate(PlayerOneKart, PlayerOneSpawnPoint.position, PlayerOneSpawnPoint.rotation);
+        int selectedKartIndex = MemoryManager.KartId;
+        Instantiate(kartPrefabs[selectedKartIndex], spawnPoints[0].position, spawnPoints[0].rotation);
+        // Ai Rivals Spawning
+        for (int i = 1; i < spawnPoints.Length; i++)
+        {
+            int aiKartIndex = i % aiKartPrefabs.Length;
+            Instantiate(aiKartPrefabs[aiKartIndex], spawnPoints[i].position, spawnPoints[i].rotation);
+        }
         StartCoroutine(Countdown());
     }
 
     IEnumerator Countdown()
     {
-        Title.text = "";
-        StartText.text = "Get Ready";
+        title.text = "";
+        startText.text = "Get Ready";
         yield return new WaitForSeconds(1);
-        StartText.text = "3";
+        startText.text = "3";
         yield return new WaitForSeconds(1);
-        StartText.text = "2";
+        startText.text = "2";
         yield return new WaitForSeconds(1);
-        StartText.text = "1";
+        startText.text = "1";
         yield return new WaitForSeconds(1);
-        StartText.text = "GO";
+        startText.text = "GO";
         SaveProgress.RaceHasStarted = true;
         yield return new WaitForSeconds(1);
-        StartText.text = "";
+        startText.text = "";
     }
 }
