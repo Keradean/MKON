@@ -20,7 +20,7 @@ MonoBehaviour:
   gripFactor: 0.683
   maxSteerAngle: 10
   steerResponse: 0.5
-  driftSideForce: 800
-  driftGripLoss: 0.6
+  driftSideForce: 700
+  frontDriftGripLoss: 0.8
+  backDriftGripLoss: 0.2
   driftSteerMultiplier: 1.5
-  driftAngle: 30
