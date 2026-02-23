@@ -83,6 +83,7 @@ public class KartController : MonoBehaviour
 
         InvokeRepeating("DisplayPosition", 0.2f, 0.2f);
         InvokeRepeating("DisplayLap", 0.2f, 0.2f);
+        GetComponentInChildren<ItemInventory>().SetItemLuck(characterSO.luck);
     }
 
     #region UI Display

@@ -19800,7 +19800,7 @@ GameObject:
   - component: {fileID: 2614837039419867024}
   m_Layer: 8
   m_Name: Racer
-  m_TagString: Untagged
+  m_TagString: Player_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25222,7 +25222,7 @@ GameObject:
   - component: {fileID: 7772791550183307756}
   m_Layer: 2
   m_Name: Physics
-  m_TagString: Untagged
+  m_TagString: Player_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25237,8 +25237,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.646, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5630662527471332237}
   - {fileID: 5441515148706760941}
@@ -25285,7 +25285,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -26200,7 +26200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9061638209375150745}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2065953, y: 0.011258066, z: -0.0023773117, w: 0.97835886}
+  m_LocalRotation: {x: 0.2065664, y: 0.019863743, z: -0.0041945307, w: 0.978222}
   m_LocalPosition: {x: 0, y: 4.936, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

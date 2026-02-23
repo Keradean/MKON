@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1125949334095962030}
   - component: {fileID: 5192158895040941214}
   - component: {fileID: 8252151904087405694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CFXR Smoke Source 3D (3)
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -4681,7 +4681,7 @@ GameObject:
   - component: {fileID: 5617695912003393978}
   - component: {fileID: 6506127167680095552}
   - component: {fileID: 6384162541886334241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Log
   m_TagString: Splat
   m_Icon: {fileID: 0}
@@ -4890,7 +4890,7 @@ GameObject:
   - component: {fileID: 6153969597877897035}
   - component: {fileID: 6997894706614711114}
   - component: {fileID: 3208431164572963681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CFXR Smoke Source 3D (2)
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -9558,7 +9558,7 @@ GameObject:
   - component: {fileID: 690875371227502644}
   - component: {fileID: 3423265341721760914}
   - component: {fileID: 6002338821203632254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CFXR Smoke Source 3D
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -14227,7 +14227,7 @@ GameObject:
   - component: {fileID: 5392154347801346774}
   - component: {fileID: 1174040744403151880}
   - component: {fileID: 6771864935298828188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14340,7 +14340,7 @@ GameObject:
   - component: {fileID: 2713156247584346997}
   - component: {fileID: 9034821915991729382}
   - component: {fileID: 7073497944200959468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CFXR Smoke Source 3D (1)
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -19009,7 +19009,7 @@ GameObject:
   - component: {fileID: 6699627256280052529}
   - component: {fileID: 5167028662037463253}
   - component: {fileID: 4265274575096754572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogStomper
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

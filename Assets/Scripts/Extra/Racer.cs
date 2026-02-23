@@ -169,7 +169,7 @@ public class Racer : MonoBehaviour
     {
         if (other.CompareTag("Speed"))
         {
-            Speedboost(20f, 2f, other.transform.forward);
+            Speedboost(10f, 2f, other.transform.forward);
         }
     }
 }

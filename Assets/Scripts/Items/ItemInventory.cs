@@ -23,6 +23,11 @@ public class ItemInventory : MonoBehaviour
         }
     }
 
+    public void SetItemLuck(float luck)
+    {
+        itemLuck = luck + 0.3f;
+    }
+
     public void CollectItem()
     {
         if (collectedItems.Count < 4)
