@@ -81,6 +81,7 @@ public class RaceStart : MonoBehaviour
         yield return new WaitForSeconds(1);
         startText.text = "GO";
         SaveProgress.RaceHasStarted = true;
+        GameManager.Instance.StartRace();
         yield return new WaitForSeconds(1);
         startText.text = "";
     }

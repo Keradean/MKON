@@ -128,6 +128,8 @@ public class KartController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.Instance.raceStarted) return;
+
         // --- SPEED DISPLAY ---
         _kartSpeed = rb.linearVelocity.magnitude * 3.6f;
         if (speedTMP != null)

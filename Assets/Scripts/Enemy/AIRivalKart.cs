@@ -23,6 +23,7 @@ public class AIRivalKart : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.raceStarted) return;
         _agent.SetDestination(AiRivalWaypoints[_currentWaypoint].position);
         CheckDistanceToNextTarget();
         RotateWheels();

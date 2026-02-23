@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> ProgressPoints = new List<GameObject>();
     public GameMode gameMode;
     public Track track;
+    public bool raceStarted;
 
 
     void Awake()
@@ -26,6 +27,11 @@ public class GameManager : MonoBehaviour
         {
             ProgressPoints[i].GetComponent<ProgressPoint>().waypointIndex = i;
         }
+    }
+
+    public void StartRace()
+    {
+        raceStarted = true;
     }
 
     // Update is called once per frame
