@@ -18,6 +18,7 @@ public class AIRivalKart : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         StartCoroutine(SetCheckDistance());
+        AiRivalWaypoints = GameManager.Instance.GetAiRivalPoints();
     }
 
     void Update()

@@ -44,6 +44,16 @@ public class GameManager : MonoBehaviour
         if (index >= ProgressPoints.Count) index = 0;
         return ProgressPoints[index].transform;
     }
+
+    public Transform[] GetAiRivalPoints()
+    {
+        Transform[] points = new Transform[ProgressPoints.Count];
+        for (int i = 0; i < ProgressPoints.Count; i++)
+        {
+            points[i] = ProgressPoints[i].transform;
+        }
+        return points;
+    }
 }
 
 public enum GameMode

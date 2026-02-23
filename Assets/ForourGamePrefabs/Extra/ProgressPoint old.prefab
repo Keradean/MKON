@@ -126,3 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressPoint
   waypointIndex: 0
+  AIRivalSpeedControl: 0
+  AIRivalSetSpeed: 0
+  ProgressNumber: 0
