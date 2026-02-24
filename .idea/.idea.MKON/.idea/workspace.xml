@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Extra/ProgressPoint old.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Extra/ProgressPoint old.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Rework/PlayerSO/Dennis.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Rework/PlayerSO/Dennis.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +163,7 @@
       <workItem from="1771402112281" duration="8838000" />
       <workItem from="1771486608333" duration="1139000" />
       <workItem from="1771495511237" duration="1518000" />
+      <workItem from="1771933526555" duration="600000" />
     </task>
     <servers />
   </component>
