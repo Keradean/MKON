@@ -65,6 +65,8 @@ public class ObstacleSound : MonoBehaviour
         }
         if (colision.gameObject.CompareTag("Splat"))
         {
+            if (GetComponentInChildren<Racer>().isShielded) return;
+
             if (!_hasSplat)
             {
                 if (!_audioSource.isPlaying && !_hasSplat)
@@ -93,7 +95,10 @@ public class ObstacleSound : MonoBehaviour
 
         if (colision.gameObject.CompareTag("Burn"))
         {
-            BurnTheKart(true);
+            if (!GetComponentInChildren<Racer>().isShielded)
+            {
+                BurnTheKart(true);                
+            }
         }
 
         if (colision.gameObject.CompareTag("Player_1"))
