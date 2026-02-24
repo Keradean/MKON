@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemType: 1
   ItemPrefab: {fileID: 4995135828919434619, guid: 5fffc47682089534193281687d740f97, type: 3}
+  itemIconPrefab: {fileID: 4478514665550023867, guid: 3a1fb99124e78df46ab10da9ff0c31dc, type: 3}
+  itemUIObj: {fileID: 0}
   boostEffect: 1
   boostDuration: 5
   boostAmount: 1

@@ -5,6 +5,7 @@ public class Item : ScriptableObject
 {
     public Itemtype itemType;
     [SerializeField] GameObject ItemPrefab;
+    public GameObject itemIconPrefab;
 
     [SerializeField] boostType boostEffect;
     [SerializeField] float boostDuration;
