@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TimelineAnimation/StartSequenceSnow.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TimelineAnimation/StartSequenceSnow.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TrackSelection.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TrackSelection.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TrackButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TrackButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

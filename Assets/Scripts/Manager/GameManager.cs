@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        // Load game mode and track from PlayerPrefs - By Dennis De Col
+        int saveMode = PlayerPrefs.GetInt("GameMode", 0); // Standard is 0, LastOut is 1
+        gameMode = (GameMode)saveMode; // Cast int to GameMode enum
         ProgressPoints[0].GetComponent<Goal>().wayPointCount = ProgressPoints.Count;
         for (int i = 1; i < ProgressPoints.Count; i++)
         {
