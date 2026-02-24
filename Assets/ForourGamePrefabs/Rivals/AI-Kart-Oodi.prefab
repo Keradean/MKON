@@ -4830,7 +4830,6 @@ GameObject:
   - component: {fileID: 342846969434709245}
   - component: {fileID: 8454198554065699109}
   - component: {fileID: 9200743924923924134}
-  - component: {fileID: 5554881356085422983}
   m_Layer: 2
   m_Name: wheel-back-left
   m_TagString: Untagged
@@ -4910,29 +4909,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5554881356085422983
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445118920951562090}
-  m_Material: {fileID: 13400000, guid: 83f0e1b2590734b80bda8c5dcda941da, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07018084
-  m_Height: 0.48408508
-  m_Direction: 0
-  m_Center: {x: -0.11, y: -0.010928012, z: 0}
 --- !u!1 &1972850849629893193
 GameObject:
   m_ObjectHideFlags: 0
@@ -15235,7 +15211,6 @@ GameObject:
   - component: {fileID: 7158892794799221440}
   - component: {fileID: 4771638937140754286}
   - component: {fileID: 3223206371253097507}
-  - component: {fileID: 922080207045000416}
   m_Layer: 2
   m_Name: wheel-front-left
   m_TagString: Untagged
@@ -15315,29 +15290,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &922080207045000416
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6087366918383120267}
-  m_Material: {fileID: 13400000, guid: 83f0e1b2590734b80bda8c5dcda941da, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07018084
-  m_Height: 0.48408508
-  m_Direction: 0
-  m_Center: {x: -0.11, y: -0.010928012, z: 0}
 --- !u!1 &6756189093578811027
 GameObject:
   m_ObjectHideFlags: 0
@@ -24685,7 +24637,6 @@ GameObject:
   - component: {fileID: 4172516436446644407}
   - component: {fileID: 9181245329796330498}
   - component: {fileID: 3014582892290405014}
-  - component: {fileID: 367113731410543163}
   m_Layer: 2
   m_Name: wheel-front-right
   m_TagString: Untagged
@@ -24765,29 +24716,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &367113731410543163
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967885089367878840}
-  m_Material: {fileID: 13400000, guid: 83f0e1b2590734b80bda8c5dcda941da, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07018084
-  m_Height: 0.48408508
-  m_Direction: 0
-  m_Center: {x: 0.13, y: -0.010928012, z: 0}
 --- !u!1 &8175131200489114408
 GameObject:
   m_ObjectHideFlags: 0
@@ -24799,7 +24727,6 @@ GameObject:
   - component: {fileID: 1668121239671645295}
   - component: {fileID: 198158998614548340}
   - component: {fileID: 1454476880249115442}
-  - component: {fileID: 3963987277373459654}
   m_Layer: 2
   m_Name: wheel-back-right
   m_TagString: Untagged
@@ -24879,29 +24806,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3963987277373459654
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8175131200489114408}
-  m_Material: {fileID: 13400000, guid: 83f0e1b2590734b80bda8c5dcda941da, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07018084
-  m_Height: 0.48408508
-  m_Direction: 0
-  m_Center: {x: 0.13, y: -0.010928012, z: 0}
 --- !u!1 &8209157916841779994
 GameObject:
   m_ObjectHideFlags: 0
