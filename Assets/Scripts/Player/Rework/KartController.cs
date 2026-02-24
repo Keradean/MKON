@@ -140,7 +140,7 @@ public class KartController : MonoBehaviour
         {
             isDrifting = true;
         }
-        else if ((!driftInput || !(Mathf.Abs(steerInput.x) > 0.1f)) && isDrifting )
+        else if (!driftInput)
         {
             isDrifting = false;
         }

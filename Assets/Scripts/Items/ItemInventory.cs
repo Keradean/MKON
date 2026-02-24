@@ -57,7 +57,7 @@ public class ItemInventory : MonoBehaviour
         if (collectedItems.Count > 0)
         {
             Item itemToUse = collectedItems[0];
-            if ( ItemInventoryUI != null)
+            if (inventoryUI != null)
             {
                 Destroy(ItemUIObjs[0]);
                 ItemUIObjs.RemoveAt(0);                
