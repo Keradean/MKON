@@ -379,6 +379,7 @@ MonoBehaviour:
   racer: {fileID: 1504610895367231815}
   specialItem: {fileID: 11400000, guid: 3235d872ae1f23f478f23b83f6f95f2f, type: 2}
   itemLuck: 0.7
+  inventoryUI: {fileID: 0}
 --- !u!114 &1504610895367231815
 MonoBehaviour:
   m_ObjectHideFlags: 0
