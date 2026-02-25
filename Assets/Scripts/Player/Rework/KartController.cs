@@ -181,7 +181,7 @@ public class KartController : MonoBehaviour
                 float availableTorque = CalculateAcceleration(Mathf.Abs(carSpeed)) * accelerationInput * characterSO.enginePower;
                 //minimum torque to prevent stalling at low speeds
                 if (accelerationInput > 0.1f)
-                    availableTorque = Mathf.Max(20f, availableTorque);
+                    availableTorque = Mathf.Max(300f, availableTorque);
 
                 rb.AddForceAtPosition(accelDir * availableTorque, wheel.transform.position);
 
@@ -211,7 +211,7 @@ public class KartController : MonoBehaviour
                 // --- DRIFT GRIP LOSS ---
                 if (isDrifting)
                 {
-                    // Hinterräder verlieren viel Grip
+                    // Hinterrï¿½der verlieren viel Grip
                     if (wheel == wheels[2] || wheel == wheels[3])
                         grip *= characterSO.backDriftGripLoss;   // z.B. 0.2f
                     else
@@ -219,7 +219,7 @@ public class KartController : MonoBehaviour
                 }
                 else
                 {
-                    // Smooth zurück zum normalen Grip
+                    // Smooth zurï¿½ck zum normalen Grip
                     grip = Mathf.Lerp(grip, 1f, Time.fixedDeltaTime * 3f);
                 }
 
@@ -275,7 +275,7 @@ public class KartController : MonoBehaviour
         float accelStat = Mathf.Clamp01(characterSO.acceleration);
 
         // Earlier torque peak for high-acceleration characters
-        float peakShift = Mathf.Lerp(0.3f, 0.1f, accelStat);
+        float peakShift = Mathf.Lerp(0.15f, 0.1f, accelStat);
 
         // Sigmoid rise at low speed
         float earlyBoost = 1f / (1f + Mathf.Exp(-10f * (normalized - peakShift)));
