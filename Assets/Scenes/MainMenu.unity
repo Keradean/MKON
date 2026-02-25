@@ -2483,6 +2483,47 @@ Transform:
   - {fileID: 463094486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1590944638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -466329591000292508, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
+  m_PrefabInstance: {fileID: 1930331871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &1590944641
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590944638}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 448996975f64731458a2d001b2889e11, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 0334b5e96fd76854781171313426852c, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &1598670093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,6 +3528,14 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 1.4884055
       objectReference: {fileID: 0}
+    - target: {fileID: -8016412588606473749, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5351410873485513530, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
+    - target: {fileID: -8016412588606473749, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a7fdf763aee62c459e950366bdf6602, type: 2}
     - target: {fileID: -7754372970155890690, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -3526,7 +3575,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -466329591000292508, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590944641}
   m_SourcePrefab: {fileID: 100100000, guid: 6a5744cb87ea5544a8208960db1b6554, type: 3}
 --- !u!4 &1930331872 stripped
 Transform:
