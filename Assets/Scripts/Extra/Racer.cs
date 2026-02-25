@@ -131,7 +131,9 @@ public class Racer : MonoBehaviour
 
     public void LastOut()
     {
+        if (GameManager.Instance.gameMode != GameMode.lastOut) return;
         obstacleSound.BurnTheKart(false);
+        Invoke("EndGame", 3.5f);
     }
 
     public void GetLastOutModifire()
