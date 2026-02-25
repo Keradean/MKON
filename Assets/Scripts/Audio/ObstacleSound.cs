@@ -105,7 +105,6 @@ public class ObstacleSound : MonoBehaviour
         {
             RivalRotating = true;
             _agent.speed = 5.5f;
-            RivalRotating = true;
         }
 
         if (colision.gameObject.CompareTag("Rival_1") || colision.gameObject.CompareTag("Rival_2") ||
@@ -197,10 +196,6 @@ public class ObstacleSound : MonoBehaviour
                 _audioSource.clip = Return;
                 _audioSource.Play();
             }
-        }
-        else
-        {
-
         }
     }
 
