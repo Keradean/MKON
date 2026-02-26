@@ -1024,24 +1024,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "e14cfb46-e563-431f-900f-f9822445efdc",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Reverse",
-                    "type": "Button",
-                    "id": "8167efca-44b9-4e8a-99f2-44c909db7153",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Reset",
                     "type": "Button",
                     "id": "be55aeca-a9b4-4773-a313-069ba28813ae",
@@ -1259,61 +1241,6 @@
                 },
                 {
                     "name": "",
-                    "id": "875637dc-b32e-4668-bb7b-4812e3091a20",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "70feb596-06af-4000-99b7-3f5d2dd6be4c",
-                    "path": "<Keyboard>/numpad0",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ae0ec1a7-8018-4065-8739-4dd8a237896e",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4167d6fb-2b51-4248-8e37-7e56c7b52151",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Reverse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "692ee5bb-3798-42a9-9fae-3e8ca3630fbb",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Reverse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "459e0fae-7222-407e-8bb1-54d402d8b9c2",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "Press(behavior=2)",
@@ -1337,7 +1264,7 @@
                 {
                     "name": "",
                     "id": "2d653169-026f-45ef-82fb-66338ad4ab02",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -1370,7 +1297,7 @@
                 {
                     "name": "",
                     "id": "6f9e5116-84b3-4bd1-84aa-b7b04db2f3d9",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
