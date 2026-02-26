@@ -5,7 +5,7 @@ public class Cake : MonoBehaviour
     [SerializeField] float speed = 4f;//maybe get from gamemanager
     [SerializeField] GameObject cake;
     [SerializeField] LayerMask layerMask;
-
+    private float lifetime = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,14 +16,19 @@ public class Cake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0)
+        {
+            Destroy(gameObject);
+        }
         //move forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         //rotate cake
         cake.transform.Rotate(new Vector3(0, 720, 0) * Time.deltaTime);
-        //if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out RaycastHit hit, 1f, LayerMask.NameToLayer("Obstacle")))
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out RaycastHit hit, 1f, LayerMask.NameToLayer("Obstacle")))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,5 +38,6 @@ public class Cake : MonoBehaviour
             other.GetComponent<Racer>()?.GetHit();
             Destroy(gameObject);
         }
+
     }
 }
