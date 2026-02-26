@@ -32,6 +32,19 @@ public class GameManager : MonoBehaviour
         {
             ProgressPoints[i].GetComponent<ProgressPoint>().waypointIndex = i;
         }
+
+        switch(track)
+        {
+            case Track.Desert:
+                currentMapName = "DesertCity";
+                break;
+            case Track.Snow:
+                currentMapName = "Snowland";
+                break;
+            case Track.Devil:
+                currentMapName = "LevelDevil";
+                break;
+        }
     }
 
     public void StartRace()

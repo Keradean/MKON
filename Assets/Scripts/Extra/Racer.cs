@@ -8,7 +8,7 @@ public class Racer : MonoBehaviour
     public int lap;
     public int waypointIndex;
     public float distanceToNext;
-    public float TotalProgress => lap * 100000 + waypointIndex * 1000 - distanceToNext;
+    public float TotalProgress => lap * 10000000 + waypointIndex * 10000 - distanceToNext;
 
     public float time;
     public float bestRoundTime = Mathf.Infinity;

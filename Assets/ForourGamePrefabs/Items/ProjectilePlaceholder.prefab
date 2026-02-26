@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a97a670a9e4324c8f76933c06e000f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cake
-  speed: 50
+  speed: 80
   cake: {fileID: 3250604634353262537}
   layerMask:
     serializedVersion: 2
