@@ -52,11 +52,13 @@ public class PlayerKartControl : MonoBehaviour
     [Header("Lap TMP")]
     [SerializeField] private TextMeshProUGUI lapTMP;
 
+
     private Racer racer;
     private Rigidbody rb;
     public bool BreakAssist = true;
     private bool isGrounded;
     private bool airConstraintsActive = false;
+
 
     #region Input ActionMap
     public void OnAccelerate(InputValue button)
@@ -83,6 +85,8 @@ public class PlayerKartControl : MonoBehaviour
     {
         ResetKart();
     }
+
+
     #endregion
 
     private void Awake()
@@ -92,6 +96,7 @@ public class PlayerKartControl : MonoBehaviour
         lapTMP = GameObject.Find("LapTMP").GetComponent<TextMeshProUGUI>();
         GameObject wrongWayPanel = GameObject.Find("Panel - WrongWay");
         wrongWayWarning = wrongWayPanel.GetComponentInChildren<TextMeshProUGUI>(true); 
+        
     }
     
     private void Start()
@@ -150,6 +155,8 @@ public class PlayerKartControl : MonoBehaviour
     
         lapTMP.text = "Lap " + currentLap + "/" + totalLaps; 
     }
+
+
 
     private void Drive(float gas, float brake, Vector2 steer, bool drift)
     {
