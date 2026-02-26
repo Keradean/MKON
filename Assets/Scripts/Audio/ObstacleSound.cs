@@ -170,6 +170,7 @@ public class ObstacleSound : MonoBehaviour
         if (!_audioSource.isPlaying)
         {
             _audioSource.clip = ExplodeSound;
+            _audioSource.volume = 0.5f;
             _audioSource.Play();
         }
         // Kart disappears temporarily
@@ -194,6 +195,7 @@ public class ObstacleSound : MonoBehaviour
             if (!_audioSource.isPlaying)
             {
                 _audioSource.clip = Return;
+                _audioSource.volume = 0.5f;
                 _audioSource.Play();
             }
         }
@@ -216,6 +218,7 @@ public class ObstacleSound : MonoBehaviour
         if (!_audioSource.isPlaying && _hasSplat)
         {
             _audioSource.clip = Return;
+            _audioSource.volume = 0.5f;
             _audioSource.Play();
             _hasSplat = false;
         }
@@ -226,6 +229,7 @@ public class ObstacleSound : MonoBehaviour
         if(!_audioSource.isPlaying && !_spinPlayed)
         {
             _audioSource.clip = SpinSound;
+            _audioSource.volume = 0.5f;
             _audioSource.Play();
             _spinPlayed = true;
         }

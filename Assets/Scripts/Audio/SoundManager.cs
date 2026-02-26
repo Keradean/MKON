@@ -45,23 +45,4 @@ public class SoundManager : MonoBehaviour
         Destroy(audioSource, clipLength);
     }
 
-    public AudioSource LoopSFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
-    {
-        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
-        audioSource.clip = audioClip;
-        audioSource.volume = volume;
-        audioSource.loop = true;
-        audioSource.Play();
-        return audioSource;
-    }
-
-    //stop a soundeffect 
-    public void StopSoundFXClip(AudioSource audioSource)
-    {
-        if (audioSource != null)
-        {
-            audioSource.Stop();
-            Destroy(audioSource.gameObject);
-        }
-    }
 }
