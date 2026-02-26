@@ -1,3 +1,4 @@
+using Manager;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -30,8 +31,8 @@ public class KartController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI positionTMP;
     [Header("Lap TMP")]
     [SerializeField] private TextMeshProUGUI lapTMP;
-
-
+    [Header("Pause")]
+    public bool isPaused = false;
 
     #region Input ActionMap
     public void OnAccelerate(InputValue button)
@@ -64,6 +65,16 @@ public class KartController : MonoBehaviour
         {
             ResetKart();
         }
+        
+    }
+    public void OnPause(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Debug.Log("Mach mal Pause, Digger");
+            Pause();
+        }
+        
     }
     #endregion
 
@@ -124,10 +135,18 @@ public class KartController : MonoBehaviour
 
         lapTMP.text = "Lap " + currentLap + "/" + totalLaps;
     }
+    private void Pause()
+    {
+        isPaused = !isPaused;
+        PauseManager.Instance.SetActive(isPaused);
+        Time.timeScale = isPaused ? 0f : 1f;
+    }
+    
     #endregion
 
     void FixedUpdate()
     {
+        if (isPaused) return;
         if (!GameManager.Instance.raceStarted) return;
         
         // --- SPEED DISPLAY ---

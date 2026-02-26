@@ -17,6 +17,7 @@ TagManager:
   - Rival_3
   - Rival_4
   - Speed
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Racer
   - Projectile
   - Map
-  - 
+  - PauseMenu
   - 
   - 
   - 

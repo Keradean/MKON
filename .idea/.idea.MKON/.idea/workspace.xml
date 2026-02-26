@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f2f9f1-a298-4d4f-ac5b-fe0a4774d9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MKON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Main.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Main.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Dennis.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Dennis.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oobi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oobi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oodi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oodi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Ooli.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Ooli.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oopi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oopi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oozi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/Kart-Oozi.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/WheelColider/PlayerKart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/PlayerKarts/WheelColider/PlayerKart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Dennis.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Dennis.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oobi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oobi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oodi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oodi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Ooli.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Ooli.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oopi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oopi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oozi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForourGamePrefabs/Rivals/AI-Kart-Oozi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/ObstacleSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ObstacleSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputActions/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputActions/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DesertCity.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DesertCity.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelDevil.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelDevil.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SnowLvl.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TrackButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TrackButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKartControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Rework/KartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Rework/KartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +174,8 @@
       <workItem from="1772023794973" duration="2628000" />
       <workItem from="1772042841401" duration="1842000" />
       <workItem from="1772105159490" duration="632000" />
+      <workItem from="1772116716467" duration="810000" />
+      <workItem from="1772117890852" duration="3788000" />
     </task>
     <servers />
   </component>
