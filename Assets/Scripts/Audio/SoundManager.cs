@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk (Wiederverwertet)
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;

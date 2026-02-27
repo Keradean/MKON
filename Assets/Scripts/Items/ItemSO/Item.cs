@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]
 public class Item : ScriptableObject
 {

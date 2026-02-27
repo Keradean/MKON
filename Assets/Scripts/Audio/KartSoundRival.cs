@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+//De Col
 public class KartSoundRival : MonoBehaviour
 {
     public AudioSource IdleSound;

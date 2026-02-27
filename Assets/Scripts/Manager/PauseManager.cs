@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//De Col
 namespace Manager
 {
     public class PauseManager : MonoBehaviour

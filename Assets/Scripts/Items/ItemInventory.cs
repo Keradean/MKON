@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-
+//Hauk
 public class ItemInventory : MonoBehaviour
 {
     private List<Item> collectedItems = new List<Item>();

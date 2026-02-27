@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-
+//Hauk
 public class MySoul : MonoBehaviour
 {
     [SerializeField] GameObject LavaPoolPrefab;

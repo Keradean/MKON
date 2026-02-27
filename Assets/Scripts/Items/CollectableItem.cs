@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk
 public class CollectableItem : MonoBehaviour
 {
     [SerializeField] GameObject item;

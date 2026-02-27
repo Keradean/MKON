@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk
 public class Cake : MonoBehaviour
 {
     [SerializeField] float speed = 4f;//maybe get from gamemanager

@@ -1,6 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-
+//Hauk
 public class PepperTrap : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;

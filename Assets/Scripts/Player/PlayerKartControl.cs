@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI; 
 using TMPro;
-
+//De Col
 public class PlayerKartControl : MonoBehaviour
 {
     [Header("Input Variables")]
@@ -58,7 +58,6 @@ public class PlayerKartControl : MonoBehaviour
     public bool BreakAssist = true;
     private bool isGrounded;
     private bool airConstraintsActive = false;
-
 
     #region Input ActionMap
     public void OnAccelerate(InputValue button)

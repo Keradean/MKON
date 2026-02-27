@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk
 public class Goal : MonoBehaviour
 {
     public int wayPointCount;

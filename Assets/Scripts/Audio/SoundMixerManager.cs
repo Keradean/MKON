@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+//Hauk (Wiederverwertet)
 public class SoundMixerManager : MonoBehaviour
 {
     [SerializeField] AudioMixer audioMixer;

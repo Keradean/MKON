@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+//Hauk
 public class EndScreen : MonoBehaviour
 {
     [SerializeField] GameObject endScreenPanel;

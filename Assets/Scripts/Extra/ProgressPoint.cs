@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Hauk
 public class ProgressPoint : MonoBehaviour
 {
     public int waypointIndex;

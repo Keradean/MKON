@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+//Hauk
 public class ItemManager : MonoBehaviour
 {
     public static ItemManager Instance;

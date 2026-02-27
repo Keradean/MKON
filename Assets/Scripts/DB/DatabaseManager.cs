@@ -3,7 +3,7 @@ using System.Collections;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
-
+//Hauk
 public class DatabaseManager : MonoBehaviour
 {
     public static DatabaseManager Instance;

@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//Hauk
 public class Spikes : MonoBehaviour
 {
     [SerializeField] GameObject spikesMesh;

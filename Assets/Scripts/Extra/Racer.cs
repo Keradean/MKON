@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//Hauk
 public class Racer : MonoBehaviour
 {
     public string racerName;

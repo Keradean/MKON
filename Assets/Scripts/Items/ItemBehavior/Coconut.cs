@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//Hauk
 public class Coconut : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent _agent;

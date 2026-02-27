@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.Playables;
-
+//De Col
 public class RaceStart : MonoBehaviour
 {
     public GameObject[] playerKart;

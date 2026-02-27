@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//De Col
 public class MemoryManager : MonoBehaviour
 {
     public static bool SinglePlayerMode;

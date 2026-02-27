@@ -2,7 +2,7 @@ using Manager;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+//Hauk (Rework von PlayerKartController(De Col), nicht fahressentielles übernommen)
 public class KartController : MonoBehaviour
 {
     public CharacterSO characterSO;

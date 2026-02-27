@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-
+//De Col
 public class MenuButtons : MonoBehaviour
 {
     [SerializeField] private GameObject[] _canvasObjects;

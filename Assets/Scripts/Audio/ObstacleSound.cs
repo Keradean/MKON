@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
-
+//De Col
 public class ObstacleSound : MonoBehaviour
 {
     [Header("Blockers Hit Config")]
