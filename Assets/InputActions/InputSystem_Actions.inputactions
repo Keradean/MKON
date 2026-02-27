@@ -1399,7 +1399,7 @@
                 {
                     "name": "",
                     "id": "2d653169-026f-45ef-82fb-66338ad4ab02",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -1432,7 +1432,7 @@
                 {
                     "name": "",
                     "id": "6f9e5116-84b3-4bd1-84aa-b7b04db2f3d9",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",

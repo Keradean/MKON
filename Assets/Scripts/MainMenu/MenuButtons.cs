@@ -47,7 +47,7 @@ public class MenuButtons : MonoBehaviour
 
     public void ExitGame()
     {
-        StartCoroutine(WaitToExit());
+        Application.Quit();
     }
     
     public void Forward()
@@ -118,12 +118,6 @@ public class MenuButtons : MonoBehaviour
         UpdateKartDisplay();
         //Makes the karts visible and start rotating
         _KartsVisible = true;
-    }
-    // Waits a moment before quitting the application
-    private IEnumerator WaitToExit()
-    {
-        yield return new WaitForSeconds(2f);
-        Application.Quit();
     }
     #endregion
 }
