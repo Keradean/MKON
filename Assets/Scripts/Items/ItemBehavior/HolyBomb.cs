@@ -29,7 +29,7 @@ public class HolyBomb : MonoBehaviour
         //StartShockwave
         grenade.SetActive(false);
         //Play Sound
-        SoundManager.instance.PlaySoundFXClip(explosionSound, transform, 0.5f);
+        SoundManager.instance.PlaySoundFXClip(explosionSound, transform, 1f);
         float targetScale = radius * 2 * 44;
         while (shockwave.transform.localScale.x < targetScale)
         {

@@ -17,5 +17,6 @@ public class CharacterSO : ScriptableObject
     [Range(0.6f, 0.9f)]public float frontDriftGripLoss = 0.8f;         // weniger Grip
     [Range(0.1f, 0.4f)] public float backDriftGripLoss = 0.2f;          // starker Gripverlust
     [Range(1.5f, 2f)] public float driftSteerMultiplier = 1.5f;  // stärkeres Einlenken
+    [Range(1f, 3f)] public float driftExitBoost = 2f;
 
 }

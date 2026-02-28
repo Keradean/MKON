@@ -33,11 +33,7 @@ public class Cake : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((layerMask.value & (1 << other.gameObject.layer)) != 0)
-        {
-            other.GetComponent<Racer>()?.GetHit();
-            Destroy(gameObject);
-        }
-
+        other.GetComponent<Racer>()?.GetHit();
+        Destroy(gameObject);
     }
 }

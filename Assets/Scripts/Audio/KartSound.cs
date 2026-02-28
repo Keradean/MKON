@@ -29,6 +29,8 @@ public class KartSound : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        StartSound.volume = StartSoundVolume;
+        StartSound.Play();
         for (int i = 0; i < TireSmoke.Length; i++)
         {
             TireSmoke[i].gameObject.SetActive(true);

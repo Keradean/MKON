@@ -177,6 +177,7 @@ MonoBehaviour:
   speedTMP: {fileID: 0}
   positionTMP: {fileID: 0}
   lapTMP: {fileID: 0}
+  isPaused: 0
 --- !u!114 &6985492090424051076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemInventory
   racer: {fileID: 1199201792946202374}
-  specialItem: {fileID: 11400000, guid: 863c885223cfeb407ae0cfaf9dca0739, type: 2}
+  specialItem: {fileID: 11400000, guid: cdb41524506323d4e9b2620e28b4af25, type: 2}
   itemLuck: 0.7
   inventoryUI: {fileID: 850744006821377882}
 --- !u!65 &155282031630336698

@@ -163,6 +163,10 @@ public class KartController : MonoBehaviour
         }
         else if (!driftInput)
         {
+            if(isDrifting)
+            {
+                
+            }
             isDrifting = false;
         }
 
@@ -229,18 +233,17 @@ public class KartController : MonoBehaviour
                 float grip = CalculateGripFactor(steerVel);
 
                 // --- DRIFT GRIP LOSS ---
-                // --- DRIFT GRIP LOSS ---
                 if (isDrifting)
                 {
-                    // Hinterr�der verlieren viel Grip
+                    // Hinterräder verlieren viel Grip
                     if (wheel == wheels[2] || wheel == wheels[3])
-                        grip *= characterSO.backDriftGripLoss;   // z.B. 0.2f
+                        grip *= characterSO.backDriftGripLoss;
                     else
-                        grip *= characterSO.frontDriftGripLoss;  // z.B. 0.75f
+                        grip *= characterSO.frontDriftGripLoss;
                 }
                 else
                 {
-                    // Smooth zur�ck zum normalen Grip
+                    // Smooth zurück zum normalen Grip
                     grip = Mathf.Lerp(grip, 1f, Time.fixedDeltaTime * 3f);
                 }
 

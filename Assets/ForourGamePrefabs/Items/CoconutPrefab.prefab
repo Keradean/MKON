@@ -84,7 +84,7 @@ MonoBehaviour:
   target: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 832
+    m_Bits: 768
   speed: 80
 --- !u!195 &1573840522202570053
 NavMeshAgent:
