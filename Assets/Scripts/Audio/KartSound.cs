@@ -88,7 +88,7 @@ public class KartSound : MonoBehaviour
     {
         if (IdleSound != null)
         {
-            IdleSound.volume = Mathf.Lerp(IdleSoundVolume, 0.0f, ddc_KartSpeed * 4);
+            IdleSound.volume = Mathf.Lerp(IdleSoundVolume, 0.0f, ddc_KartSpeed * 40);
         }
     }
 
@@ -99,7 +99,8 @@ public class KartSound : MonoBehaviour
             if (!isReversing && ddc_KartSpeed > 0.01f)
             {
                 // Vorwärts fahren
-                DrivingSound.volume = Mathf.Lerp(0.1f, DrivingSoundVolume, ddc_KartSpeed * 1.2f);
+                Debug.Log("Playing driving sound. Speed: " + ddc_KartSpeed);
+                DrivingSound.volume = Mathf.Lerp(0.1f, DrivingSoundVolume, ddc_KartSpeed * 12f);
                 DrivingSound.pitch = Mathf.Lerp(0.3f, DrivingSoundMaxPitch, ddc_KartSpeed + (Mathf.Sin(Time.time * 10f) * 0.05f));
             }
             else
@@ -116,7 +117,7 @@ public class KartSound : MonoBehaviour
             if (isReversing && ddc_KartSpeed > 0.01f) 
             {
                 // Rückwärts fahren
-                ReverseSound.volume = Mathf.Lerp(0.1f, ReverseSoundVolume, ddc_KartSpeed * 1.2f);
+                ReverseSound.volume = Mathf.Lerp(0.1f, ReverseSoundVolume, ddc_KartSpeed * 12f);
                 ReverseSound.pitch = Mathf.Lerp(0.5f, ReverseSoundMaxPitch, ddc_KartSpeed + (Mathf.Sin(Time.time * 10f) * 0.05f));
             }
             else

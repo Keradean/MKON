@@ -49,6 +49,23 @@ public class ObstacleSound : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            if (!_hasHit)
+            {
+                if (!_audioSource.isPlaying)
+                {
+                    _audioSource.clip = FenceHit;
+                    _audioSource.Play();
+                    _hasHit = true;
+                }
+            }
+        }
+
+    }
+
     private void OnTriggerEnter(Collider colision)
     {
         if (colision.gameObject.CompareTag("Obstacle"))

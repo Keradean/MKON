@@ -5148,7 +5148,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -5446,7 +5446,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -20132,7 +20132,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -25019,7 +25019,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -25238,7 +25238,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -25522,6 +25522,7 @@ MonoBehaviour:
   speedTMP: {fileID: 0}
   positionTMP: {fileID: 0}
   lapTMP: {fileID: 0}
+  isPaused: 0
 --- !u!114 &8063153087407546443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25724,7 +25725,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -26035,7 +26036,7 @@ AudioSource:
   m_GameObject: {fileID: 8053501036315480630}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1842578090982578735, guid: f9f1ef36372cfa14a91fd63a6b2191c8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 17fe35ce980ef4d26b6aa57295f97cb5, type: 3}
   m_PlayOnAwake: 1
@@ -26047,7 +26048,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -26299,7 +26300,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 100
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -26425,19 +26426,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7629775874013214959, guid: 46656898a34ef0e4caf1954d3e5cd3dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9652661
+      value: 0.96526396
       objectReference: {fileID: 0}
     - target: {fileID: 7629775874013214959, guid: 46656898a34ef0e4caf1954d3e5cd3dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.26126894
+      value: 0.26127672
       objectReference: {fileID: 0}
     - target: {fileID: 7629775874013214959, guid: 46656898a34ef0e4caf1954d3e5cd3dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000007299641
+      value: -0.0000007900841
       objectReference: {fileID: 0}
     - target: {fileID: 7629775874013214959, guid: 46656898a34ef0e4caf1954d3e5cd3dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000019757968
+      value: 0.0000002138592
       objectReference: {fileID: 0}
     - target: {fileID: 7629775874013214959, guid: 46656898a34ef0e4caf1954d3e5cd3dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
