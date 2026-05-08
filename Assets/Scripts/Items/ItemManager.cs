@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Manager;
+
 //Hauk
 public class ItemManager : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class ItemManager : MonoBehaviour
 
     public Item GetRandomItem(int ranking, float luck) 
     {
-        int racerCount = GameManager.Instance.RacerRanking.Count;
+        int racerCount = GameManager.Instance.racerRanking.Count;
         //modifiy chance to get items for your ranking, projectiles in the back, traps in the front
         float modifire = (racerCount/2 - ranking) *2;
         float roll = Random.Range(0f, 100f);

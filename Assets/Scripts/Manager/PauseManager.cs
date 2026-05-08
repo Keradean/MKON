@@ -5,11 +5,9 @@ namespace Manager
     public class PauseManager : MonoBehaviour
     {
         public static GameObject Instance;
-
-        void Awake()
+        private void Awake()
         {
-            Instance = gameObject;  
-            // verstecke das gameObject, damit es nicht im Spiel sichtbar ist
+            Instance = gameObject;
             gameObject.SetActive(false);
         } 
     }

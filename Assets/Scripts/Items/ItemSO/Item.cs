@@ -1,3 +1,4 @@
+using Manager;
 using UnityEngine;
 //Hauk
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]
@@ -51,8 +52,8 @@ public class Item : ScriptableObject
         if (proj.TryGetComponent(out Coconut coconut))
         {
             int targetIndex = user.racer.rankingPos - 2;
-            if (targetIndex < 0) targetIndex = GameManager.Instance.RacerRanking.Count - 1;
-            coconut.target = GameManager.Instance.RacerRanking[targetIndex];
+            if (targetIndex < 0) targetIndex = GameManager.Instance.racerRanking.Count - 1;
+            coconut.target = GameManager.Instance.racerRanking[targetIndex];
         }
     }
 }

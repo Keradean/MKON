@@ -562,31 +562,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459f667bcdda31545982cac3aca5dbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtons
-  _canvasObjects:
+  canvasObjects:
   - {fileID: 206533800}
   - {fileID: 463094485}
-  _kartId: 0
-  DisplayKarts: {fileID: 1297679693}
-  Karts:
+  kartId: 0
+  displayKarts: {fileID: 1297679693}
+  karts:
   - {fileID: 28938525}
   - {fileID: 2027794111}
   - {fileID: 926213677}
   - {fileID: 1979867370}
   - {fileID: 1089663141}
   - {fileID: 253861056}
-  BackAndForwardButtons:
+  backAndForwardButtons:
   - {fileID: 1993388284}
   - {fileID: 1522122617}
-  KartNames:
+  kartNames:
   - Oobi
   - Oodi
   - Ooli
   - Oopi
   - Oozi
   - Dennis
-  DisplayName: {fileID: 1203792709}
-  _KartsVisible: 0
-  KartRotationSpeed: 20
+  displayName: {fileID: 1203792709}
+  kartsVisible: 0
+  kartRotationSpeed: 20
 --- !u!1 &463094485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1198937153
 Transform:
   m_ObjectHideFlags: 0
@@ -1596,12 +1596,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198937152}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1361033156}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1198937154
 MonoBehaviour:
@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198937152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92731b427ca6fdc44bfe5a9eb71d262f, type: 3}
   m_Name: 
@@ -2206,7 +2206,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1198937153}
   - {fileID: 461170764}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4223,3 +4222,4 @@ SceneRoots:
   - {fileID: 1486033922}
   - {fileID: 1527229263}
   - {fileID: 1361033156}
+  - {fileID: 1198937153}

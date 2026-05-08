@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Manager;
 using TMPro;
 using UnityEngine.Playables;
 //De Col

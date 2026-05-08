@@ -88,6 +88,10 @@ public class KartSound : MonoBehaviour
     {
         if (IdleSound != null)
         {
+            if (ddc_KartSpeed <= 0f)
+            {
+                return;
+            }
             IdleSound.volume = Mathf.Lerp(IdleSoundVolume, 0.0f, ddc_KartSpeed * 40);
         }
     }

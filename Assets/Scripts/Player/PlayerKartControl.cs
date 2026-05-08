@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Manager;
 using UnityEngine.UI; 
 using TMPro;
 //De Col

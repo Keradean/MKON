@@ -1,4 +1,6 @@
 using System.Collections;
+using Manager;
+using UI;
 using UnityEngine;
 //Hauk
 public class Racer : MonoBehaviour
@@ -38,7 +40,7 @@ public class Racer : MonoBehaviour
 
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.RacerRanking.Add(this);
+            GameManager.Instance.racerRanking.Add(this);
         }
         else
         {
@@ -131,7 +133,7 @@ public class Racer : MonoBehaviour
 
     public void LastOut()
     {
-        if (GameManager.Instance.gameMode != GameMode.lastOut) return;
+        if (GameManager.Instance.gameMode != GameMode.LastOut) return;
         obstacleSound.BurnTheKart(false);
         Invoke("EndGame", 3.5f);
     }
@@ -150,7 +152,7 @@ public class Racer : MonoBehaviour
 
     public void EndGame()
     {
-        GameManager.Instance.FinishedRacer.Add(this);
+        GameManager.Instance.finishedRacer.Add(this);
         if (!isAI)//if its the player of this kart
         {
             GameObject.Find("EndScreen").GetComponent<EndScreen>().ActivateEndScreen(this);
@@ -160,7 +162,7 @@ public class Racer : MonoBehaviour
             GameObject.Find("EndScreen").GetComponent<EndScreen>().UpdateRanking();
 
         }
-        if(GameManager.Instance.FinishedRacer.Count == GameManager.Instance.RacerRanking.Count)
+        if(GameManager.Instance.finishedRacer.Count == GameManager.Instance.racerRanking.Count)
         {
             // All racers have finished, show end screen for all
             GameObject.Find("EndScreen").GetComponent<EndScreen>().ActivateEndScreen(null);

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Manager;
 using UnityEngine.AI;
 //De Col
 public class AIRivalKart : MonoBehaviour
